@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-11T15:27:07.304Z",
+  "status": "passed",
+  "mode": "LIVE",
+  "inputProvenance": "SYNTHETIC",
+  "hosting": "LOCAL ONLY",
+  "url": "http://127.0.0.1:5174/dashboard?mode=live",
+  "acceptedVerdicts": 5,
+  "appliedActions": 3,
+  "registryLinks": [
+    "https://testnet.monadscan.com/tx/0x143ae17abea2943ef3b0c74cee1d179a8dffc0d41e53bf5cf001567ec4b0d306",
+    "https://testnet.monadscan.com/tx/0x930107da363ab95a0410301a765afb1e08b5c864b2ca26f489c5c29dc71cce49",
+    "https://testnet.monadscan.com/tx/0xa0977802572bae00c4643bb15b56fe84771b2d5b45828a371936240e5b6dd265",
+    "https://testnet.monadscan.com/tx/0xac4f562a7e332a41ad0eb6694f876aa8038d62ebac8b5c34d7edfbb7117f3c40",
+    "https://testnet.monadscan.com/tx/0xbae68837e1c351ee19047544bc99d9b6d89c3d3ec69d04288cba2619af97f341"
+  ],
+  "rpcLogRequests": 116,
+  "maximumBlockRange": 100,
+  "signatureVerification": "passed",
+  "alteredFeatureVerification": "mismatch",
+  "api": {
+    "service": "Horkos Evidence API",
+    "status": "ok",
+    "mode": "read-only",
+    "verification": "offline-signature-and-scorer",
+    "storedBundlesCount": 10,
+    "rejectedFiles": 0
+  },
+  "uploadStatus": 405,
+  "unknownOriginStatus": 403,
+  "mobileOverflow": false,
+  "browserErrors": [],
+  "screenshots": [
+    "live-desktop.png",
+    "live-evidence.png",
+    "live-mobile.png"
+  ]
+}

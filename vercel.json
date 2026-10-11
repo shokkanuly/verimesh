@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "apps/dashboard/dist",
+  "functions": {
+    "api/evidence.mjs": {
+      "maxDuration": 15,
+      "includeFiles": "{evidence/{recorded,live}/bundle-*.json,packages/sentinel/{src/score/*.ts,config/*.json}}"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/evidence?path=:path*" },
+    { "source": "/dashboard/:path*", "destination": "/index.html" }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-11T14:37:04.023Z",
+  "chainId": 10143,
+  "deploymentCommit": "d2e3e4d153600e9ef7aef3fa46b449fd98ea3087",
+  "results": [
+    {
+      "name": "VerdictRegistry",
+      "address": "0x664b308a4f263DB551A7398A78a3dC383916867c",
+      "provider": "sourcify",
+      "status": "verified",
+      "exitCode": 0,
+      "reason": "Forge confirmed source verification",
+      "explorer": "https://testnet.monadvision.com/address/0x664b308a4f263DB551A7398A78a3dC383916867c?tab=Contract"
+    },
+    {
+      "name": "TripwireGuardianV2",
+      "address": "0x499d40fE88d6f0906bF258a1907B915e49941321",
+      "provider": "sourcify",
+      "status": "verified",
+      "exitCode": 0,
+      "reason": "Forge confirmed source verification",
+      "explorer": "https://testnet.monadvision.com/address/0x499d40fE88d6f0906bF258a1907B915e49941321?tab=Contract"
+    },
+    {
+      "name": "SimpleGate",
+      "address": "0xFd1b15Dd59B1714F6873951924a7DA010F15494e",
+      "provider": "sourcify",
+      "status": "verified",
+      "exitCode": 0,
+      "reason": "Forge confirmed source verification",
+      "explorer": "https://testnet.monadvision.com/address/0xFd1b15Dd59B1714F6873951924a7DA010F15494e?tab=Contract"
+    },
+    {
+      "name": "MockBridge",
+      "address": "0x1C7810075519005F5204Dc5Fea49bB9ce94D093e",
+      "provider": "sourcify",
+      "status": "verified",
+      "exitCode": 0,
+      "reason": "Forge confirmed source verification",
+      "explorer": "https://testnet.monadvision.com/address/0x1C7810075519005F5204Dc5Fea49bB9ce94D093e?tab=Contract"
+    }
+  ]
+}

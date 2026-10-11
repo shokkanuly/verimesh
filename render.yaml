@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: horkos-evidence
+    runtime: node
+    plan: free
+    autoDeployTrigger: "off"
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @horkos/sentinel... build
+    startCommand: node packages/sentinel/dist/server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 24.14.1
+      - key: START_SERVER
+        value: "true"
+      - key: HOST
+        value: 0.0.0.0
+      - key: EVIDENCE_READ_ONLY
+        value: "true"
+      - key: EVIDENCE_DIRECTORY
+        value: /tmp/horkos-evidence
+      - key: CORS_ORIGINS
+        sync: false
+  - type: web
+    name: horkos-dashboard
+    runtime: static
+    autoDeployTrigger: "off"
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @horkos/dashboard... build
+    staticPublishPath: apps/dashboard/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 24.14.1
+      - key: VITE_EVIDENCE_API_URL
+        sync: false

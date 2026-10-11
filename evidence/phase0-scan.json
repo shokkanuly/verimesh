@@ -1,0 +1,370 @@
+{
+  "task": "F-01",
+  "date": "2026-10-07T06:33:47.959Z",
+  "scannerVersion": "8.30.1",
+  "branch": "fix/ship",
+  "revision": "3e58ae85cd3e6558dd78b79774d70aad0083ecdf",
+  "commitsScanned": 32,
+  "clean": false,
+  "classificationExit": 0,
+  "scans": [
+    {
+      "scope": "working-tree",
+      "exit": 1,
+      "count": 27
+    },
+    {
+      "scope": "history",
+      "exit": 1,
+      "count": 20
+    }
+  ],
+  "counts": {
+    "working-tree": {
+      "EXPOSED_OPERATOR_WALLET": 2,
+      "PUBLIC_FIXTURE_USED_AS_OPERATOR": 2,
+      "PUBLIC_SIGNATURE_OR_HASH_DATA": 14,
+      "PUBLIC_VENDOR_TEST_FIXTURE": 2,
+      "PUBLIC_TEST_OR_OFFLINE_FIXTURE": 7
+    },
+    "history": {
+      "PUBLIC_TEST_OR_OFFLINE_FIXTURE": 6,
+      "PUBLIC_SIGNATURE_OR_HASH_DATA": 6,
+      "EXPOSED_OPERATOR_WALLET": 2,
+      "PUBLIC_FIXTURE_IN_OLD_DEMO": 2,
+      "INSECURE_HISTORICAL_EXAMPLE": 2,
+      "PUBLIC_VENDOR_TEST_FIXTURE": 2
+    }
+  },
+  "findings": [
+    {
+      "scope": "working-tree",
+      "file": "contracts/.env",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "EXPOSED_OPERATOR_WALLET"
+    },
+    {
+      "scope": "working-tree",
+      "file": "contracts/.env",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_FIXTURE_USED_AS_OPERATOR"
+    },
+    {
+      "scope": "working-tree",
+      "file": ".env",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "EXPOSED_OPERATOR_WALLET"
+    },
+    {
+      "scope": "working-tree",
+      "file": ".env",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_FIXTURE_USED_AS_OPERATOR"
+    },
+    {
+      "scope": "working-tree",
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "contracts/lib/forge-std/test/StdCheats.t.sol",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_VENDOR_TEST_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "contracts/lib/openzeppelin-contracts/lib/forge-std/test/StdCheats.t.sol",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_VENDOR_TEST_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "evidence/bundle-latest.json",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "evidence/bundle-latest.json",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "evidence/replay/bundle-throttle.json",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "evidence/replay/bundle-throttle.json",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "evidence/replay/bundle-delay.json",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "evidence/replay/bundle-delay.json",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "evidence/replay/bundle-freeze.json",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "evidence/replay/bundle-freeze.json",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "packages/sentinel/dist/replay.js",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "packages/sentinel/src/replay.ts",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "working-tree",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "working-tree",
+      "file": "apps/dashboard/dist/assets/index-zyKbBfWe.js",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "working-tree",
+      "file": "apps/dashboard/dist/assets/index-zyKbBfWe.js",
+      "commit": "working-tree",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "history",
+      "file": "packages/sentinel/src/replay.ts",
+      "commit": "c07fcc2ab5a52021a00d42dc6e03f5585df71d05",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "history",
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "3e40e5e1ff89fb8dd581c03c34885f802f1b14da",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "history",
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "3e40e5e1ff89fb8dd581c03c34885f802f1b14da",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "history",
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "3e40e5e1ff89fb8dd581c03c34885f802f1b14da",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "history",
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "3e40e5e1ff89fb8dd581c03c34885f802f1b14da",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "history",
+      "file": "evidence/bundle-latest.json",
+      "commit": "feac3c46041779e0011e8c09ee393aa713320927",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "history",
+      "file": "evidence/bundle-latest.json",
+      "commit": "feac3c46041779e0011e8c09ee393aa713320927",
+      "type": "generic-api-key",
+      "category": "PUBLIC_SIGNATURE_OR_HASH_DATA"
+    },
+    {
+      "scope": "history",
+      "file": "scripts/integrator-demo.ts",
+      "commit": "3c96496f7020b81cbed7ee5d9ccfe67a750c1f45",
+      "type": "verimesh-private-key-assignment",
+      "category": "EXPOSED_OPERATOR_WALLET"
+    },
+    {
+      "scope": "history",
+      "file": "scripts/integrator-demo.ts",
+      "commit": "3c96496f7020b81cbed7ee5d9ccfe67a750c1f45",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_FIXTURE_IN_OLD_DEMO"
+    },
+    {
+      "scope": "history",
+      "file": "scripts/demo-tripwire.ts",
+      "commit": "feac3c46041779e0011e8c09ee393aa713320927",
+      "type": "verimesh-private-key-assignment",
+      "category": "EXPOSED_OPERATOR_WALLET"
+    },
+    {
+      "scope": "history",
+      "file": "scripts/demo-tripwire.ts",
+      "commit": "feac3c46041779e0011e8c09ee393aa713320927",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_FIXTURE_IN_OLD_DEMO"
+    },
+    {
+      "scope": "history",
+      "file": ".env.example",
+      "commit": "05284568ee7580337f41ff2ee90e500934d4bcd6",
+      "type": "verimesh-private-key-assignment",
+      "category": "INSECURE_HISTORICAL_EXAMPLE"
+    },
+    {
+      "scope": "history",
+      "file": ".env.example",
+      "commit": "05284568ee7580337f41ff2ee90e500934d4bcd6",
+      "type": "verimesh-private-key-assignment",
+      "category": "INSECURE_HISTORICAL_EXAMPLE"
+    },
+    {
+      "scope": "history",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "history",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "history",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "history",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "history",
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_TEST_OR_OFFLINE_FIXTURE"
+    },
+    {
+      "scope": "history",
+      "file": "contracts/lib/forge-std/test/StdCheats.t.sol",
+      "commit": "05284568ee7580337f41ff2ee90e500934d4bcd6",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_VENDOR_TEST_FIXTURE"
+    },
+    {
+      "scope": "history",
+      "file": "contracts/lib/openzeppelin-contracts/lib/forge-std/test/StdCheats.t.sol",
+      "commit": "05284568ee7580337f41ff2ee90e500934d4bcd6",
+      "type": "verimesh-private-key-assignment",
+      "category": "PUBLIC_VENDOR_TEST_FIXTURE"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "chainId": 10143,
+  "network": "monad-testnet",
+  "rpcUrl": "https://testnet-rpc.monad.xyz",
+  "explorerUrl": "https://testnet.monadscan.com",
+  "commit": "d2e3e4d153600e9ef7aef3fa46b449fd98ea3087",
+  "solc": "0.8.24",
+  "deployer": "0xeaDE449cDA4CB81855a6De7952d2F65151B06211",
+  "stage": "demo",
+  "previousManifestHash": "0xd6dddd519bf7969b5cf11bfafb572a02155e9c47cfdbb19fbde35d37ff746c95",
+  "contracts": {
+    "ERC8004Identity": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+    "VerdictRegistry": {
+      "address": "0x664b308a4f263db551a7398a78a3dc383916867c",
+      "txHash": "0xe38944b0e4f92f56132460e08d6ee6fe907cb31c7b4f5b7514c9303c27af2896",
+      "block": 70136150,
+      "runtimeCodehash": "0x87a482c241fa3f026beef2684a57f223372f3dcf47f2772f4eadcea667a23374",
+      "constructorArgsHash": "0xa47373439bc68c4bba3c52d0ffcc29eb6abd9876e4c397ebc6325b3baf0a049f"
+    },
+    "TripwireGuardianV2": {
+      "address": "0x499d40fe88d6f0906bf258a1907b915e49941321",
+      "txHash": "0xe5cf681550770f431eb8e77338d8ca53122d0863c4e57bd307fc89def6d9d371",
+      "block": 70136169,
+      "runtimeCodehash": "0x6249e8adeae3b573b44585679cc955b11b1789ed61449ca6631fd6245633e50c",
+      "constructorArgsHash": "0x3c5f9e15e41aee9cb6fdf94e5bc286cd5d2ed298e0058b3cf03f2e344ebcfa71"
+    },
+    "SimpleGate": {
+      "address": "0xfd1b15dd59b1714f6873951924a7da010f15494e",
+      "txHash": "0x36e6e1ed0f6814bb1e2f950032a3d1f4412125133aafa8e6ce411d1fd7a6c034",
+      "block": 70136188,
+      "runtimeCodehash": "0x8c57692dab2c1a2083724024a45d574579699338225a907fd7a5b26966e9ae6c",
+      "constructorArgsHash": "0x77cf976611cfb888384f93624bb52bb61b26dbcf3251cab770ed49fab0c9efad"
+    },
+    "MockBridge": {
+      "address": "0x1c7810075519005f5204dc5fea49bb9ce94d093e",
+      "txHash": "0xd1da5d151f4598366c0b20d6f29ea39bafd54093a3b0fbaba3ecd8cbd5228783",
+      "block": 70136206,
+      "runtimeCodehash": "0xcda7d1e51522e97edc8b40d277516e769089d9d6e1d410165bdefdf58aaa958f",
+      "constructorArgsHash": "0x61628691fc12b96551c701b4a5c0603671058458c3f28dd53f494489bc7af976"
+    }
+  },
+  "agent": {
+    "agentId": "2185",
+    "keyX": "0xdc881e826e7c384f0905e33ec320f0b449fea30228ef270253ed2e91c4523661",
+    "keyY": "0x94bd7a9e0d086b043e1624f73e541f278e30feb146eb1321ed19cd708c1027f7",
+    "epoch": 1,
+    "registration": {
+      "txHash": "0x8e0b9faa0d568ce09edacf9127a7c75c61763163aa6de462db181d87c62d3f28",
+      "block": 70136122,
+      "owner": "0x761e347186B4E479F7C9142f41a65C4091c48fbe"
+    }
+  },
+  "allowlists": {
+    "agents": [
+      "2185"
+    ],
+    "models": [
+      "0xbc68e549ee283f4b1f5aef1cd8f8dd8180e65d6329fd54376c177e8498ebb2e0"
+    ]
+  },
+  "owners": {
+    "agent": "0x761e347186B4E479F7C9142f41a65C4091c48fbe",
+    "guardian": "0xeaDE449cDA4CB81855a6De7952d2F65151B06211",
+    "demo": "0xeaDE449cDA4CB81855a6De7952d2F65151B06211"
+  },
+  "guardian": {
+    "outflowCap": "1000000000000000"
+  },
+  "seed": [
+    {
+      "action": "bindKey",
+      "txHash": "0x84a47d62f2c9a94522c87313fa331324fba9bd939cda9883e310b4088047aaa4",
+      "block": 70136235
+    },
+    {
+      "action": "setTrustedAgent",
+      "txHash": "0x90c576ba10623919ded259e2fff4bdd7a744b680af4897929c70ed4422b30b01",
+      "block": 70136254
+    },
+    {
+      "action": "setTrustedModel",
+      "txHash": "0x31a834a2ac23d2f073d7f45d4c612d6ea4f429c7def909e2805e337505e8594b",
+      "block": 70136274
+    },
+    {
+      "action": "configureBridge",
+      "txHash": "0xc4e405a72653a05472a9f755a3de4f58138e0efec82a92b1681541e9c8a5979c",
+      "block": 70136296
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-11T15:27:41.806Z",
+  "sourceCommit": "352ead6421d54e37baa9860b73b13a1c62911493",
+  "scanner": "gitleaks 8.30.1",
+  "tree": {
+    "scope": "git archive HEAD only; ignored secrets and original history excluded",
+    "exitCode": 0,
+    "findingsCount": 0
+  },
+  "suppliedRemote": {
+    "url": "https://github.com/shokkanuly/verimesh",
+    "visibility": "private",
+    "head": "da63215292bc77e86a47b07ebf2e4567c1d0bd79",
+    "scope": "all fetched remote branches",
+    "exitCode": 1,
+    "findingsCount": 3,
+    "findings": [
+      {
+        "file": "contracts/lib/forge-std/test/StdCheats.t.sol",
+        "commit": "cfde44624f89f0aa9bc04d1943e7d9cc29ded93f",
+        "type": "horkos-private-key-assignment"
+      },
+      {
+        "file": "contracts/lib/openzeppelin-contracts/lib/forge-std/test/StdCheats.t.sol",
+        "commit": "cfde44624f89f0aa9bc04d1943e7d9cc29ded93f",
+        "type": "horkos-private-key-assignment"
+      },
+      {
+        "file": "packages/sentinel/src/replay.ts",
+        "commit": "cfde44624f89f0aa9bc04d1943e7d9cc29ded93f",
+        "type": "horkos-private-key-assignment"
+      }
+    ]
+  },
+  "publication": "not performed; empty private repository requested; old history untouched"
+}

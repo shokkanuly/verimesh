@@ -1,0 +1,7 @@
+{
+  "deploymentCommit": "d2e3e4d153600e9ef7aef3fa46b449fd98ea3087",
+  "contractsTree": "e3b534515249031dfebf0c0f3e7182257b281bf6",
+  "contractsSourceHash": "0x6272f0047c78689921e01550a894bf8580c4248d27fb37f08a93990739db74f7",
+  "gitmodulesBlob": null,
+  "purpose": "Preserve deployment-source comparison in a history-free release. Hash every contract/dependency/configuration file except the two approved unused upstream test directories and the isolated DeploymentSafety test fixture. Runtime/build sources remain exact; creation receipts, runtime bytecode and Sourcify independently verified."
+}

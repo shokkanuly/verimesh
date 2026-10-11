@@ -1,0 +1,14 @@
+{
+  "name": "tripwire-rules",
+  "version": "2.0.0",
+  "tiers": { "throttleBps": 6500, "delayBps": 8500, "freezeBps": 9500 },
+  "weights": {
+    "proofMismatch": 8200,
+    "unbackedPayout": 6200,
+    "counterpartyFlagged": 1800,
+    "velocitySurgeBps": 1500,
+    "sizeRatioBps": 2000
+  },
+  "arithmetic": "floor each continuous contribution; sum; clamp to 10000",
+  "provenance": "Synthetic reference rules, not a calibrated fraud probability"
+}

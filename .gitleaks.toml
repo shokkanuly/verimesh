@@ -1,0 +1,24 @@
+title = "Horkos: default rules plus explicit wallet key assignments"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "horkos-private-key-assignment"
+description = "32-byte private key associated with a private-key variable"
+regex = '''(?i)(?:[a-z0-9_]*private_?key[a-z0-9_]*)[^;]{0,160}?(0x[0-9a-f]{64})\b'''
+secretGroup = 1
+keywords = ["privatekey", "private_key"]
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "An adjacent empty env entry is an identifier, not a credential"
+regexTarget = "secret"
+regexes = ['''^SENTINEL_P256_PRIVATE_KEY=?$''']
+
+[[rules.allowlists]]
+description = "Public P256 coordinate JSON fields, not private signing material"
+regexTarget = "line"
+regexes = ['''^\s*"key[XY]": "0x[0-9a-f]{64}",?\s*$''']

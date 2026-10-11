@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620" role="img" aria-labelledby="title desc">
+  <title id="title">Horkos implementation architecture</title>
+  <desc id="desc">Synthetic replay flows through normalization, versioned rules and a P256 signer to the registry. Identity ownership controls signer binding. Consumers enforce local replay protection. Evidence is checked by the CLI and read-only API. Fresh testnet deployment remains pending.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#47534e"/></marker></defs>
+  <rect width="1280" height="620" fill="#f7f9f8"/>
+  <g font-family="Arial, sans-serif" fill="#17251f">
+    <text x="40" y="52" font-size="30" font-weight="700">Horkos</text>
+    <text x="40" y="82" font-size="16">Single-signer machine attestations. Commitments, not proof of input truth.</text>
+    <text x="40" y="128" font-size="15" font-weight="700">OFF-CHAIN</text>
+    <text x="780" y="128" font-size="15" font-weight="700">CONTRACTS</text>
+    <g fill="#ffffff" stroke="#aebbb4" stroke-width="1.5">
+      <rect x="40" y="153" width="200" height="94" rx="6"/>
+      <rect x="290" y="153" width="200" height="94" rx="6"/>
+      <rect x="540" y="153" width="190" height="94" rx="6"/>
+      <rect x="780" y="153" width="210" height="94" rx="6"/>
+      <rect x="1030" y="153" width="210" height="94" rx="6"/>
+      <rect x="780" y="303" width="210" height="106" rx="6"/>
+      <rect x="1030" y="303" width="210" height="106" rx="6"/>
+      <rect x="40" y="333" width="290" height="94" rx="6"/>
+      <rect x="390" y="333" width="290" height="94" rx="6"/>
+    </g>
+    <g font-size="18" font-weight="700">
+      <text x="58" y="184">Replay + Normalize</text><text x="308" y="184">Versioned Rules</text>
+      <text x="558" y="184">P256 Signer</text><text x="798" y="184">VerdictRegistry</text>
+      <text x="1048" y="184">ERC-8004 Identity</text><text x="798" y="335">Consumers</text>
+      <text x="1048" y="335">MockBridge</text><text x="58" y="365">Evidence Bundle</text>
+      <text x="408" y="365">CLI + Read-Only API</text>
+    </g>
+    <g font-size="14" fill="#46544c">
+      <text x="58" y="211">Five synthetic incidents</text><text x="58" y="231">Canonical input hash</text>
+      <text x="308" y="211">Integer score, source hash</text><text x="308" y="231">v1 retained / v2 active</text>
+      <text x="558" y="211">EIP-712 v1 digest</text><text x="558" y="231">Private key stays local</text>
+      <text x="798" y="211">Signature + active key</text><text x="798" y="231">Epoch + accepted verdict</text>
+      <text x="1048" y="211">ownerOf(agentId)</text><text x="1048" y="231">Owner binds/revokes key</text>
+      <text x="798" y="363">Tripwire / GuardedAction</text><text x="798" y="387">Policy + local consume-once</text>
+      <text x="1048" y="363">Owner-authorized release</text><text x="1048" y="387">Atomic outflow guard</text>
+      <text x="58" y="392">Event, features, model, signature</text><text x="58" y="413">Public evidence only</text>
+      <text x="408" y="392">Recompute digest, rules, signature</text><text x="408" y="413">Not independent source observation</text>
+    </g>
+    <g stroke="#47534e" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M240 200 H280"/><path d="M490 200 H530"/><path d="M730 200 H770"/>
+      <path d="M1030 220 H1000"/><path d="M885 247 V293"/><path d="M990 355 H1020"/>
+      <path d="M140 247 V323"/><path d="M330 380 H380"/>
+    </g>
+    <path d="M885 409 V462 H540 V437" stroke="#47534e" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+    <text x="728" y="485" font-size="14" fill="#46544c">Accepted/action logs feed the explicit LIVE dashboard.</text>
+    <rect x="40" y="519" width="1200" height="65" rx="6" fill="#e9f2ed"/>
+    <text x="58" y="545" font-size="16" font-weight="700">Evidence boundary</text>
+    <text x="58" y="570" font-size="15">Local Anvil uses a P256 fallback. Native fork evidence is separate. Fresh verified Monad deployment is pending.</text>
+  </g>
+</svg>

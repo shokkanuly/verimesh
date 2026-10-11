@@ -1,0 +1,18 @@
+{
+  "chainId": 10143,
+  "network": "monad-testnet",
+  "rpcUrl": "https://testnet-rpc.monad.xyz",
+  "explorerUrl": "https://testnet.monadscan.com",
+  "stage": "undeployed",
+  "contracts": {
+    "ERC8004Identity": "0x8004A818BFB912233c491871b3d84c89A494BD9e"
+  },
+  "agent": {
+    "agentId": "2185",
+    "registration": {
+      "txHash": "0x8e0b9faa0d568ce09edacf9127a7c75c61763163aa6de462db181d87c62d3f28",
+      "block": 70136122,
+      "owner": "0x761e347186B4E479F7C9142f41a65C4091c48fbe"
+    }
+  }
+}

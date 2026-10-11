@@ -1,0 +1,117 @@
+{
+  "mode": "isolated-local-clone",
+  "commit": "352ead6421d54e37baa9860b73b13a1c62911493",
+  "steps": [
+    {
+      "command": "git rev-parse HEAD",
+      "exitCode": 0,
+      "elapsedSeconds": 0.013499292000000001
+    },
+    {
+      "command": "clone committed source into private temporary checkout",
+      "exitCode": 0,
+      "elapsedSeconds": 0.823335291
+    },
+    {
+      "command": "checkout tested commit",
+      "exitCode": 0,
+      "elapsedSeconds": 0.06419812500000001
+    },
+    {
+      "command": "check clean checkout",
+      "exitCode": 0,
+      "elapsedSeconds": 0.06486283399999991
+    },
+    {
+      "command": "pnpm install --frozen-lockfile",
+      "exitCode": 0,
+      "elapsedSeconds": 1.511256
+    },
+    {
+      "command": "pnpm sandbox",
+      "exitCode": 0,
+      "elapsedSeconds": 13.982622084
+    },
+    {
+      "command": "pnpm verify-bundle evidence/replay/sandbox/bundle-freeze.json",
+      "exitCode": 0,
+      "elapsedSeconds": 0.1798954999999987
+    },
+    {
+      "command": "node examples/ts-sentinel/demo.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 0.17313091700000222
+    },
+    {
+      "command": "node apps/integrator-demo/demo.mjs",
+      "exitCode": 0,
+      "elapsedSeconds": 0.7337384999999995
+    },
+    {
+      "command": "pnpm test",
+      "exitCode": 0,
+      "elapsedSeconds": 8.734551332999999
+    },
+    {
+      "command": "forge test --gas-snapshot-check true",
+      "exitCode": 0,
+      "elapsedSeconds": 2.2768917089999996
+    },
+    {
+      "command": "pnpm check:addresses",
+      "exitCode": 0,
+      "elapsedSeconds": 0.41317758300000057
+    },
+    {
+      "command": "pnpm check:parity",
+      "exitCode": 0,
+      "elapsedSeconds": 2.8825733749999998
+    },
+    {
+      "command": "pnpm replay",
+      "exitCode": 0,
+      "elapsedSeconds": 0.39600341599999955
+    },
+    {
+      "command": "pnpm verify-bundle evidence/replay/bundle-benign.json",
+      "exitCode": 0,
+      "elapsedSeconds": 0.30135020799999984
+    },
+    {
+      "command": "pnpm verify-bundle evidence/replay/bundle-near-miss.json",
+      "exitCode": 0,
+      "elapsedSeconds": 0.3204396659999984
+    },
+    {
+      "command": "pnpm verify-bundle evidence/replay/bundle-throttle.json",
+      "exitCode": 0,
+      "elapsedSeconds": 0.287731667
+    },
+    {
+      "command": "pnpm verify-bundle evidence/replay/bundle-delay.json",
+      "exitCode": 0,
+      "elapsedSeconds": 0.28244158400000013
+    },
+    {
+      "command": "pnpm verify-bundle evidence/replay/bundle-freeze.json",
+      "exitCode": 0,
+      "elapsedSeconds": 0.30717591600000016
+    },
+    {
+      "command": "check no tracked source changes",
+      "exitCode": 0,
+      "elapsedSeconds": 0.18163549999999667
+    }
+  ],
+  "quickstartSeconds": 15.847162790999999,
+  "localSandboxSeconds": 3.8120692080000005,
+  "firstLocalVerdictSeconds": 2.49831475,
+  "localReceipts": 31,
+  "solidity": {
+    "passed": 146,
+    "failed": 0,
+    "skipped": 6
+  },
+  "elapsedSeconds": 33.933807791,
+  "remoteCI": "not-run"
+}

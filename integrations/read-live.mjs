@@ -1,0 +1,10 @@
+import { readFileSync } from 'node:fs';
+import { getDeploymentAddresses, VERDICT_REGISTRY_ABI } from '../packages/sdk/dist/index.js';
+import { createPublicClient, http } from 'viem';
+const deployment = JSON.parse(readFileSync(new URL('../deployments/monad-testnet.json', import.meta.url), 'utf8'));
+const addresses = getDeploymentAddresses(deployment);
+const rpc = createPublicClient({ transport: http(deployment.rpcUrl) });
+if (await rpc.getChainId() !== deployment.chainId) throw new Error('Wrong chain');
+const key = await rpc.readContract({ address: addresses.VerdictRegistry, abi: VERDICT_REGISTRY_ABI, functionName: 'currentKey', args: [BigInt(deployment.agent.agentId)] });
+console.log({ agentId: deployment.agent.agentId, epoch: key[2], active: key[3] });
+console.log(addresses);

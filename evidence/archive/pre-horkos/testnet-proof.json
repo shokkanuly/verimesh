@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-07T15:06:42.948Z",
+  "rpcUrl": "https://testnet-rpc.monad.xyz",
+  "chainId": 10143,
+  "blockNumber": "69001583",
+  "contracts": [
+    {
+      "name": "ERC8004Identity",
+      "address": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+      "codeHash": "0xd0e45b1d89fa9b6cc7e97c1f155d64180e5c232aaccf9900ef9d4fd738c02b41"
+    },
+    {
+      "name": "VerdictRegistry",
+      "address": "0xEa695145d4b0405E21eb35a359A1CC3E7F756266",
+      "codeHash": "0x4e95bf1ec1c8389733e9b05663365a8d0a47707836bd2613ebad75c7e25004de"
+    },
+    {
+      "name": "TripwireGuardianV2",
+      "address": "0xb8a1C56a117446023a45346Bc51aAA6bB46DB26E",
+      "codeHash": "0x31b840bff1fad6e666baf3b6c19971f5be50e1cae3b41d2a00c70d7da42c9525"
+    },
+    {
+      "name": "SimpleGate",
+      "address": "0xC520c3B91057320f599f5870E53e61c77C56d4ac",
+      "codeHash": "0xc8aa69418ccd5b4caf3208606e888de02ea15c0a6f4df226f236a86a52c6a4d0"
+    }
+  ],
+  "precompile": "0x0000000000000000000000000000000000000100",
+  "digest": "0x1f1ecab4ea2c807684277faa2d02358b2df0c4ca9b36360ed4a10668435edc81",
+  "signature": {
+    "r": "0xc29452528a234d5b6150967d8418c2ac5f2363270d0c3d9f16cd47a7c0a74414",
+    "s": "0x470416758a934596c2d8a70cb748d8351cfdce49102db431ebb79adfd811ad76"
+  },
+  "publicKey": {
+    "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+    "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+  },
+  "validSignatureAccepted": true,
+  "tamperedDigestRejected": true,
+  "scope": "Read-only RPC proof. Does not submit a verdict, verify deployed source equivalence, or execute a guardian action."
+}

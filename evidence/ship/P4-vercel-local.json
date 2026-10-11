@@ -1,0 +1,47 @@
+{
+  "mode": "local-vercel-node-handler",
+  "deployed": false,
+  "checkedAt": "2026-10-11T15:26:23.216Z",
+  "health": {
+    "service": "Horkos Evidence API",
+    "status": "ok",
+    "mode": "read-only",
+    "verification": "offline-signature-and-scorer",
+    "storedBundlesCount": 10,
+    "rejectedFiles": 0
+  },
+  "checks": [
+    {
+      "name": "health",
+      "status": 200
+    },
+    {
+      "name": "live-bundle",
+      "status": 200
+    },
+    {
+      "name": "raw-body-verify",
+      "status": 200
+    },
+    {
+      "name": "parsed-body-verify",
+      "status": 200
+    },
+    {
+      "name": "tamper",
+      "status": 422
+    },
+    {
+      "name": "upload-disabled",
+      "status": 405
+    },
+    {
+      "name": "unknown-origin",
+      "status": 403
+    },
+    {
+      "name": "body-bound",
+      "status": 413
+    }
+  ]
+}

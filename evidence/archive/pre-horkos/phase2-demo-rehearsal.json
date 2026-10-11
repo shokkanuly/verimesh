@@ -1,0 +1,692 @@
+{
+  "mode": "local",
+  "provenance": "synthetic",
+  "status": "passed",
+  "chainId": 31337,
+  "p256": "Solidity fallback, not native Monad",
+  "model": {
+    "name": "tripwire-rules",
+    "version": "2.0.0",
+    "hash": "0xbc68e549ee283f4b1f5aef1cd8f8dd8180e65d6329fd54376c177e8498ebb2e0"
+  },
+  "recipient": "0x000000000000000000000000000000000000cafe",
+  "contracts": {
+    "identity": "0xdb7a921ac339e5a324891906afa183bb805a363b",
+    "registry": "0x26c27210d5158217f082e16ac93c4fbb43f3aa15",
+    "guardian": "0xc39bde65d96f75824ee2c73eee94b72e69d7605e",
+    "bridge": "0xf0158be6e879cdebe2af679b2297c91e8bbdde9d"
+  },
+  "budget": {
+    "capWei": "3000000000000000000",
+    "perRunWei": "3750000000000000000",
+    "totalWei": "11250000000000000000"
+  },
+  "setupReceipts": [
+    {
+      "label": "deploy:MockIdentity",
+      "txHash": "0x844d1d2e99b37f3f30f8c687b79d2a7da667bc61b01ddd106e5809076a658dea",
+      "block": 1,
+      "status": "success",
+      "blockHash": "0x499ae793ecfb11b7485cb2e11dcb2a513e7cd4abfd9d6e916f0515e7e88dd2e3"
+    },
+    {
+      "label": "deploy:VerdictRegistry",
+      "txHash": "0x699bb1e7cae97dccf952d1385cbc2d53d4c3208768a0de5e85f059211c3c9274",
+      "block": 2,
+      "status": "success",
+      "blockHash": "0x443f18d4b0676c674f31706ce6097a7cc9c8102ee86ba8388ac53b9686c128fe"
+    },
+    {
+      "label": "deploy:TripwireGuardianV2",
+      "txHash": "0xb8f74fe15d8b64cf9e4e2b980f8c183151bd257945c17d4ff92d7007b45d7dea",
+      "block": 3,
+      "status": "success",
+      "blockHash": "0xb8b763bf95ac1ae175f6d3a22de8894dd5ef2967862dca9bd04e15885af783ef"
+    },
+    {
+      "label": "deploy:MockBridge",
+      "txHash": "0xe7d1a3b4bb9ea1f87344b2f57537fc9ca916d88f57acc00208e0631d079e5ecb",
+      "block": 4,
+      "status": "success",
+      "blockHash": "0xc5bbfa94a2c24f9b92e4c546fb2bb1b5703159b89017a2dc66a62449a16a8bc3"
+    },
+    {
+      "label": "setOwner",
+      "txHash": "0x6b66d546255060723d3fd48ffa3f97dea5b3ab1b2676ace4e60d3881413c9468",
+      "block": 5,
+      "status": "success",
+      "blockHash": "0x4641e5e5f266e2aaff49672bd39d9a3c5368696b44a58fa4600e77aa718ab058"
+    },
+    {
+      "label": "bindKey",
+      "txHash": "0x6b6574f41b3699a69447145eb67dbaab75444aee42ff01ede707f29d273e7c6b",
+      "block": 6,
+      "status": "success",
+      "blockHash": "0x312d40a8aec869c363485b55d94eb2d6a41a49b09e6265b4fdab66a49cde81fc"
+    },
+    {
+      "label": "setTrustedAgent",
+      "txHash": "0x3eed1db603047f54a6c7d5802043c54140cad5449217f81f48126ca60ed741f4",
+      "block": 7,
+      "status": "success",
+      "blockHash": "0xea15536850bb9c99be237f1755f3af4a5720478955c2c2c1fd1c5fdbef147f45"
+    },
+    {
+      "label": "setTrustedModel",
+      "txHash": "0x875c4ee116b763116d99b55f4d411be0f8e123c97f64e4b7130b169a83877ccf",
+      "block": 8,
+      "status": "success",
+      "blockHash": "0x2251cbaf59e6806c89baa041680092fcfabd0d205f73dfc2207bc429d8b8af2f"
+    },
+    {
+      "label": "configureBridge",
+      "txHash": "0x8d9ac4dffc41d5aad769485d92869563aa81f50d4a3814b249398184fd985dee",
+      "block": 9,
+      "status": "success",
+      "blockHash": "0x9116f5f29b26622a0d4a1fe8a8f66d90d0d059940c120eb4c5907c64de042acc"
+    },
+    {
+      "label": "fund:MockBridge",
+      "txHash": "0x099bccac26198a82314329c4a29ef4dc9aa0daf2b0d4da612dd3b3233eb68ad8",
+      "block": 10,
+      "status": "success",
+      "blockHash": "0x2cbfe673c68c4569bdacb6b654d9217f5950214d6c29b70e56a408811be8e0b3"
+    }
+  ],
+  "runs": [
+    {
+      "run": 1,
+      "status": "passed",
+      "nonce": "7660699822900365122",
+      "transfersWei": "3750000000000000000",
+      "incidents": [
+        {
+          "incident": "benign",
+          "verdictId": "0xbff398b9d620a964fd5b0cd29c19cd210bef2dbaf99e4830c87840a71dfc85c8",
+          "scoreBps": 550,
+          "tier": 0
+        },
+        {
+          "incident": "near-miss",
+          "verdictId": "0x8d3598adb2cf192d0ef311220d7880ceef570b9155dc05626436e96816bbcb8e",
+          "scoreBps": 6200,
+          "tier": 0
+        },
+        {
+          "incident": "throttle",
+          "verdictId": "0x6d401752dcb8d1210c67c8beff606aa93c9e8b0b38faa1d318adaf821c8636d2",
+          "scoreBps": 7300,
+          "tier": 1
+        },
+        {
+          "incident": "delay",
+          "verdictId": "0x96ce2a19334a88ea1d345e991ecb7bc39c72898891315238df50c7c806a5a836",
+          "scoreBps": 8900,
+          "tier": 2
+        },
+        {
+          "incident": "freeze",
+          "verdictId": "0x7f0bcb43e50b2ae2191b7d15eba6f6920fd1c9e109f6b9137ff25dd28b7b9284",
+          "scoreBps": 9900,
+          "tier": 3
+        }
+      ],
+      "receipts": [
+        {
+          "label": "verdict:benign",
+          "txHash": "0x37722e4fbbd8c65c68d48b54d7a1de6533dff840daafa3ba1c985dab1db473da",
+          "status": "success",
+          "block": "11",
+          "blockHash": "0xb78970104dd00d75b54d0429b99117e3d0eb60dbe59cbb8af015f101d4f655cf"
+        },
+        {
+          "label": "release:benign",
+          "txHash": "0xcc0cd7e6c020637860826a6963c020532813704973428b945f46555a3c3c13ec",
+          "status": "success",
+          "block": "12",
+          "blockHash": "0xbb70587445b4477b33d017e29c4be2a271765caf99df0425ee8894d26b7c7392"
+        },
+        {
+          "label": "verdict:near-miss",
+          "txHash": "0x7eddae3c5a81fcd066ea756eaa4e0f7c35953bdc840790680272cc7fb537e3db",
+          "status": "success",
+          "block": "13",
+          "blockHash": "0x63e9d3056948aea210f1a012a9aaaa43c7f08bffd8000388a9199cdc27afe7b3"
+        },
+        {
+          "label": "release:near-miss",
+          "txHash": "0x49dc23c873ee4a1035d18ba9f81ddbfaaa71d748c60c24b36d8f2c3a71a5be69",
+          "status": "success",
+          "block": "14",
+          "blockHash": "0x27af669978022c8a063e4a906c8281476aaca7fd27dbb3ef09e8717a6befc739"
+        },
+        {
+          "label": "verdict:throttle",
+          "txHash": "0x4cfa9bbcd2be3be08f42d05f6c068cf5fab04bbc6a28e77691db15779d401280",
+          "status": "success",
+          "block": "15",
+          "blockHash": "0xfc14c8a7c4e6137892f89c6c9b0e4af3e21a08bffc0a044a25a8422fc215c2b7"
+        },
+        {
+          "label": "action:throttle",
+          "txHash": "0x951bf6eeaae236a702d8c32d80cf081484daa384e9f226bafe204baf8c7ff564",
+          "status": "success",
+          "block": "16",
+          "blockHash": "0xaef7c8ca23e82a5760e8d5c7f712ebc63f1d876a58c74eee682fcac92060a367"
+        },
+        {
+          "label": "release:throttle",
+          "txHash": "0xd76f3ab986e9944b7bfb26c504ea3ecff9b5f963b97014bde7986313618dd96b",
+          "status": "success",
+          "block": "17",
+          "blockHash": "0x3bbab90aec5cbd99d075448419b304d4d1fedfb46161d312c05599c4cdddffcf"
+        },
+        {
+          "label": "release:throttle-to-cap",
+          "txHash": "0x3b17e92ee86728c0684fb93c7cf3c9a44328a29b0c4fc8cc97331a73d3ff5905",
+          "status": "success",
+          "block": "18",
+          "blockHash": "0x0cc7cfc04300bba295cddfa71f20857d2c57cabe5f1e5c4e1638e154b74b418e"
+        },
+        {
+          "label": "reject:cap-plus-one",
+          "txHash": "0x831fece882fafc6e2e633db28fe27f5f5367bdc87f2ba3aa0407e8cc2f912a55",
+          "status": "reverted",
+          "block": "19",
+          "blockHash": "0xeb3a280501a6fd4352748276a2391cb97dea983fb3fe593a35b82e7d0ecfaa43"
+        },
+        {
+          "label": "verdict:delay",
+          "txHash": "0xc5b4a1e4fc2a4925b88aa352184f65321a9318890f8bc4491afd4998ba0fceae",
+          "status": "success",
+          "block": "20",
+          "blockHash": "0x8fcd27250de11db312e240a317d624efb206aa19509e7c68a53be6d30ae35647"
+        },
+        {
+          "label": "action:delay",
+          "txHash": "0x050ed892d54e3675bb60887026991f7b62ecb69f0f44979de9c22f35cbd7881b",
+          "status": "success",
+          "block": "21",
+          "blockHash": "0xa1bf82cc6841ab8f310ac7ed0e5dd41577a423d84380085fa5faad38e092427f"
+        },
+        {
+          "label": "release:delay",
+          "txHash": "0xfb1a64d57b470687559d6dfb053ccdfe5af6161deb5d7f9758ca07f8217abdc3",
+          "status": "reverted",
+          "block": "22",
+          "blockHash": "0x63b5723e9e721c91016b18150184a1e65cd007fb7c42c78c530a125a19f2d528"
+        },
+        {
+          "label": "verdict:freeze",
+          "txHash": "0xf9fa6f8a5d21270f3736ca55ab7fe6904ca3e74a01262072c2c1da0feffa8de7",
+          "status": "success",
+          "block": "23",
+          "blockHash": "0xcc8157100dde7c460022927b429ffe371a47c077c811cdf3bebfe0b85a3ed81f"
+        },
+        {
+          "label": "action:freeze",
+          "txHash": "0x99c9fcc9a4fa5e1c2933537c2ede3ca9df632c2f876d5708084fb1a7979e4667",
+          "status": "success",
+          "block": "24",
+          "blockHash": "0x3471f45c72bb2dd8f99be62951e231686f6ce830c8bc08ed732f886234b6d65f"
+        },
+        {
+          "label": "release:freeze",
+          "txHash": "0xe05867b16504652ac118392ce07be3faace3ead50f83ba75ff12fd9d48749006",
+          "status": "reverted",
+          "block": "25",
+          "blockHash": "0x867fd0397238ddaf215516600f602fa087eb9693981f20f397389a9aac691414"
+        },
+        {
+          "label": "reject:tampered-signature",
+          "txHash": "0x60d1dc81de4ef0ed4827b3105afd7842d3b7f3603793ce476ac8b7062cbd9251",
+          "status": "reverted",
+          "block": "26",
+          "blockHash": "0x1612b03748b4259414c14dd50ce0ba3b17024a304ea95ec76cf765f84db5a8be"
+        },
+        {
+          "label": "reject:duplicate-verdict",
+          "txHash": "0xabcc1092750c0a118474b4a082923d2c3042f114724abba1e2b505f5b9bde3e6",
+          "status": "reverted",
+          "block": "27",
+          "blockHash": "0x42dc4f0095b43854a5513eef242fcc3dbda3fb4697e136b0e48a576648e37614"
+        },
+        {
+          "label": "reject:consumed-action",
+          "txHash": "0xb87dee48cfe32676a05fb756051749b360654cd146be20239a2a0a4a7ed5db6f",
+          "status": "reverted",
+          "block": "28",
+          "blockHash": "0xfbd177ef46209b847ec35b0eba0d3f6308343d9fea69b7ed2dd042f50ad77cd7"
+        },
+        {
+          "label": "owner:reset",
+          "txHash": "0xbb89b885e0a887387183c5ba910cb0d0514e6455ed6057833f517045e7502e0e",
+          "status": "success",
+          "block": "29",
+          "blockHash": "0xb568839ad5a0ef77d82ee63e80090fd93288950b57e0a3f06d23b5efb61d67d0"
+        },
+        {
+          "label": "release:after-reset",
+          "txHash": "0xe1b6523eb5cb9dddbdfabcfbc91d87cc8a7e52ab0438223e64cac3987c7185ea",
+          "status": "success",
+          "block": "30",
+          "blockHash": "0x2420c3c50250c4ee220d8b177762688bc23c5f6b992c898e07793aa2e81a85f3"
+        }
+      ],
+      "checks": {
+        "exactFunding": true,
+        "benign": true,
+        "nearMiss": true,
+        "cumulativeCap": true,
+        "delay": true,
+        "freeze": true,
+        "tamper": true,
+        "duplicate": true,
+        "consumedAction": true,
+        "ownerReset": true,
+        "resetPreservesOutflow": true
+      }
+    },
+    {
+      "run": 2,
+      "status": "passed",
+      "nonce": "7660699822900365132",
+      "transfersWei": "3750000000000000000",
+      "incidents": [
+        {
+          "incident": "benign",
+          "verdictId": "0xdc628f1320988a6a3312e9987adf8a1c9e38b2388bd918cc06ea99fe08047d80",
+          "scoreBps": 550,
+          "tier": 0
+        },
+        {
+          "incident": "near-miss",
+          "verdictId": "0x65420ca76d530b59b7d909ce1f612f666078728c60e50f015faee15ab7209c80",
+          "scoreBps": 6200,
+          "tier": 0
+        },
+        {
+          "incident": "throttle",
+          "verdictId": "0xeb41022521da673391ac253c53322e179d0fb9a5d87c520284c632058a88420c",
+          "scoreBps": 7300,
+          "tier": 1
+        },
+        {
+          "incident": "delay",
+          "verdictId": "0x7d2282ac622c769c06940188094df2891bbef74faf62a85c1cf0f9c13375177b",
+          "scoreBps": 8900,
+          "tier": 2
+        },
+        {
+          "incident": "freeze",
+          "verdictId": "0xc8acdc95cd0219c9c5442b97a12ceb9b40b8654ebd45431e9df131e8bdaa450b",
+          "scoreBps": 9900,
+          "tier": 3
+        }
+      ],
+      "receipts": [
+        {
+          "label": "verdict:benign",
+          "txHash": "0x0deb715ea240ae5ffd1c5dfa992f07294ea49b3e5b0eb6aeb674bf5489114c2c",
+          "status": "success",
+          "block": "32",
+          "blockHash": "0x405c8f091d23528696890f4a7f98bc30a3e63fdef0b89ca46252fbf5ce93a49d"
+        },
+        {
+          "label": "release:benign",
+          "txHash": "0x08d89aee7ff70a87feda993cedf35e11d1777ddde5b7b179c66ce1eb25e43816",
+          "status": "success",
+          "block": "33",
+          "blockHash": "0xc5ce33e3ca4a3ec22bbe41520ca3ac09743d3cdf627eaf9ef466cde5271101a2"
+        },
+        {
+          "label": "verdict:near-miss",
+          "txHash": "0xf6e51d33270dff68b06f14acd371a31b923a506dcd6e81748dc1a445fff658e4",
+          "status": "success",
+          "block": "34",
+          "blockHash": "0xc8bb782a392bfbf19fdf31d89867fae899e8bdf8a8dba1e6a1f86c39b2645d7d"
+        },
+        {
+          "label": "release:near-miss",
+          "txHash": "0x06f0fbd985bbe1c57d2c5e1daa9ec9acd6406327242c2c6e5059d5cdc8e24e2a",
+          "status": "success",
+          "block": "35",
+          "blockHash": "0x37c4ff56bb08e32f2b1afe5039ee98450dd6b8ebe62fa1c756e9b1a59b1afa0e"
+        },
+        {
+          "label": "verdict:throttle",
+          "txHash": "0x3f6615a8e54d36082e6303669e65d6a13266a2c2aaea6953a993558194023c9c",
+          "status": "success",
+          "block": "36",
+          "blockHash": "0x63160ebb56f53f8415ef5f2917169cb1511d81d7bd55f3e4da534bc49865f479"
+        },
+        {
+          "label": "action:throttle",
+          "txHash": "0xa125ac1f3a0f16f26720c2e7b3f2478edfd7741a524a2fc283e619abe9606775",
+          "status": "success",
+          "block": "37",
+          "blockHash": "0x127fcb5203a29b15c0aea8773c6903e20e50df7d70609c4abd65d6f3e0d4338b"
+        },
+        {
+          "label": "release:throttle",
+          "txHash": "0x596a69cde846955bb4752e7e483106f6be1212cc76164384f475d84572516fcb",
+          "status": "success",
+          "block": "38",
+          "blockHash": "0x1963f0876421986e0399827bfe6dab8704e1ac372db7ac90af0eebd21722b358"
+        },
+        {
+          "label": "release:throttle-to-cap",
+          "txHash": "0x0f23219f96618402f7b6fe6ca53a2055df5a115128feacecee027694ff8d88f6",
+          "status": "success",
+          "block": "39",
+          "blockHash": "0x39655245cb3ed1a6690dc1ace7ec93f3fb4bfc0deda89e1e49f2d33af5de0312"
+        },
+        {
+          "label": "reject:cap-plus-one",
+          "txHash": "0x9999c5ff7172f6f12c8744482f656b4526c287b38fd1b33bd605dac0780d670b",
+          "status": "reverted",
+          "block": "40",
+          "blockHash": "0x9a203cd12c053b88d545960043e5135c9373561787f7cb16de41a8ba1aba7c61"
+        },
+        {
+          "label": "verdict:delay",
+          "txHash": "0xd95feea517b34307c14a7a6e1d92630f821338e3580b64dd378d4b8c028f51d9",
+          "status": "success",
+          "block": "41",
+          "blockHash": "0x46b42f9792483ae45d44bed619ce5747619f19bee64336a772a01a15f55eeef0"
+        },
+        {
+          "label": "action:delay",
+          "txHash": "0xa10bda5bf57890e41337eb1dd62d9fbd11a2cf4463029884d0bc14f753194dd0",
+          "status": "success",
+          "block": "42",
+          "blockHash": "0x734a6dd0ca52b6ae71353e3d47b3aaf075ab3ebbb211a47190f8d94bc782e85c"
+        },
+        {
+          "label": "release:delay",
+          "txHash": "0xf4d57bbc5b8024b9873647621306a09bfc06acff402f8547d769a168a75fb659",
+          "status": "reverted",
+          "block": "43",
+          "blockHash": "0xbfcbacfc61da346e232ac5deaeb78a7734917110235a8c23d322d499b4759bf4"
+        },
+        {
+          "label": "verdict:freeze",
+          "txHash": "0x18a008246484eaf14c3c9e85f3f06c50699c31f0001fdab631360d2386ee59ac",
+          "status": "success",
+          "block": "44",
+          "blockHash": "0x967a941007f193f2b8f76433722c42535f9a0aad686a4bbc7376a01e1fe00c0f"
+        },
+        {
+          "label": "action:freeze",
+          "txHash": "0x3cdca5ee08571de95979bde3cb9a1a7361076065d61b4ca9db7883dc9094a14d",
+          "status": "success",
+          "block": "45",
+          "blockHash": "0x306759ee2e48c8c33032e13a0ca0b8df527ed872e9f3ec8893a33ff43511d417"
+        },
+        {
+          "label": "release:freeze",
+          "txHash": "0x0539d6fc1edf723c57ec94f5d26c732aed94d018862b489d561f87aea5fb3b12",
+          "status": "reverted",
+          "block": "46",
+          "blockHash": "0x166cd796a51b734689a5452cf6428263286ffeef2062ec21e5dbcedf9f2f6e42"
+        },
+        {
+          "label": "reject:tampered-signature",
+          "txHash": "0xc3eaf3129d01cd7af01e8d64f1630cf2deaaa6437f9bdf87a4a63e5b35c2a9f3",
+          "status": "reverted",
+          "block": "47",
+          "blockHash": "0x964701d8f55fb6f3f29e7de6c780b308138ae86823d48c503a434e17f0ded599"
+        },
+        {
+          "label": "reject:duplicate-verdict",
+          "txHash": "0x41f447d9e05e96773adb3e68a60e1bc2915ba1c62c48f2b81aa8f0dde9cb1a4b",
+          "status": "reverted",
+          "block": "48",
+          "blockHash": "0xdd08ce00562cc09e099a1ddfade6da2184bdb9856817b1cbb9949240e85631e3"
+        },
+        {
+          "label": "reject:consumed-action",
+          "txHash": "0xd44bba5477749a66b1e4a35a11307e9cd25bc43d6558cac02f1299fd684d1440",
+          "status": "reverted",
+          "block": "49",
+          "blockHash": "0xd1fc0ee770db8051358ac6ce298300d25f5cfeb57f6dcc20e2c0b6c065f2b2d7"
+        },
+        {
+          "label": "owner:reset",
+          "txHash": "0x58e8ee972dc1daa51e39d30fe8d742e37f264e448e67b6a83bb11543d7dacd7a",
+          "status": "success",
+          "block": "50",
+          "blockHash": "0x7a65a2e0e38cb572e57c9dbe7b26789623484798a1c0fb47006fa74cad0e38db"
+        },
+        {
+          "label": "release:after-reset",
+          "txHash": "0xa16c185d85477a772c15f2a1805974ccaac23a0184f1de8b538d4df982a69459",
+          "status": "success",
+          "block": "51",
+          "blockHash": "0x89f0ace7b9fc248c45ae156176977c2df140b0e4f1a34a384cd8b4ba3f20630c"
+        }
+      ],
+      "checks": {
+        "exactFunding": true,
+        "benign": true,
+        "nearMiss": true,
+        "cumulativeCap": true,
+        "delay": true,
+        "freeze": true,
+        "tamper": true,
+        "duplicate": true,
+        "consumedAction": true,
+        "ownerReset": true,
+        "resetPreservesOutflow": true
+      }
+    },
+    {
+      "run": 3,
+      "status": "passed",
+      "nonce": "7660699822900365142",
+      "transfersWei": "3750000000000000000",
+      "incidents": [
+        {
+          "incident": "benign",
+          "verdictId": "0x76ff8f006513a3675eb420fb149b9de37c3a2e17209fd6458ff8253e9d496530",
+          "scoreBps": 550,
+          "tier": 0
+        },
+        {
+          "incident": "near-miss",
+          "verdictId": "0x8460ffe5917036aa0a41364bf8f44e50cf13ea6122c42d455c54e145b3ee5086",
+          "scoreBps": 6200,
+          "tier": 0
+        },
+        {
+          "incident": "throttle",
+          "verdictId": "0x3c9ce54a2661fe2767cb2c9db60a641edca32192144fd0f59dc9a1a1d875a72d",
+          "scoreBps": 7300,
+          "tier": 1
+        },
+        {
+          "incident": "delay",
+          "verdictId": "0xa2ca339ca1bd2d263aec89074a3408691d052e2158acf35e95e4d39d5c2d2018",
+          "scoreBps": 8900,
+          "tier": 2
+        },
+        {
+          "incident": "freeze",
+          "verdictId": "0xc3c036c7a6e8c276703394eef9137a5aee2a5bfeb52495c64685e926f69bfba0",
+          "scoreBps": 9900,
+          "tier": 3
+        }
+      ],
+      "receipts": [
+        {
+          "label": "verdict:benign",
+          "txHash": "0x2f13b66ae95621694b4ad28a5c2d37db7216056ae0b59baba05942bf0fbc1b15",
+          "status": "success",
+          "block": "53",
+          "blockHash": "0x46bb700dd445c0cb6e7709182c6cc8aa1ff321c3142e5c18a2d37cb811e6f3c3"
+        },
+        {
+          "label": "release:benign",
+          "txHash": "0x7f6ce7dee4c3535cd1001104480c505da5dbf06d21fcc70d1998f313e858d07b",
+          "status": "success",
+          "block": "54",
+          "blockHash": "0xbea49cc1a5cb6ca89f2d8474bad9eb63d8a0705bf66a3502591c82473625aad3"
+        },
+        {
+          "label": "verdict:near-miss",
+          "txHash": "0xf74caafd5b5f3f3a70bceb5808c5a39c5cad202a1b39e2aca0ca30311a51412f",
+          "status": "success",
+          "block": "55",
+          "blockHash": "0x9e1cc196047f6c95379aa4234ac86d971a2011cee7cc14921b626cdcc3f0bd07"
+        },
+        {
+          "label": "release:near-miss",
+          "txHash": "0x002e582f30c9473a7622c711c8e8c5fa7fe462de69c060a180634acf2ef75d9e",
+          "status": "success",
+          "block": "56",
+          "blockHash": "0xa6faeac4e94af2406320524d4b53fb110a1db558f6cd4c4467d736320ac0e4df"
+        },
+        {
+          "label": "verdict:throttle",
+          "txHash": "0x0e5b172570ba5dc2d15bc44dbb88f6104e6202a8d3e1450aff6526a75a677467",
+          "status": "success",
+          "block": "57",
+          "blockHash": "0x6e651f79c860ba172a9eae736613512cf957bc7f8e20de5d7e2127b1d9cb5ab7"
+        },
+        {
+          "label": "action:throttle",
+          "txHash": "0x954b09c4c4f3ba662b22ba94cf8f7c6886db40d7443ba9fa73882383fea906e5",
+          "status": "success",
+          "block": "58",
+          "blockHash": "0xf09a4c234c34de37a439ef7e252b9b19ebd6549f7c107c28e39c51b2c9071317"
+        },
+        {
+          "label": "release:throttle",
+          "txHash": "0x40dc2fbf1902aa891752b8f8732ba86e327b9480ac719efc1dc4edffb9be2da6",
+          "status": "success",
+          "block": "59",
+          "blockHash": "0x1a911526695db96af6b77b6c75e8815fe43c54ff7b7e6ad57e6139fd02bd3ef9"
+        },
+        {
+          "label": "release:throttle-to-cap",
+          "txHash": "0x029f91ba6872079676c61237149de75a5a6196541f8b07f7453bc5a81e845f85",
+          "status": "success",
+          "block": "60",
+          "blockHash": "0x05fd0fc75e7acf165c51c7ff2725c4e1edb1fa4ee5ad5609b22db67cfa334d5a"
+        },
+        {
+          "label": "reject:cap-plus-one",
+          "txHash": "0x61f8d79be11b5efede6e3208f82fddaba8323992176c624fe280de9503ab0491",
+          "status": "reverted",
+          "block": "61",
+          "blockHash": "0x0e6ec4880f225c0fba0e82a2ca79f5281c91716fd815be52e20bc3afb36c99cb"
+        },
+        {
+          "label": "verdict:delay",
+          "txHash": "0x36ce5e6aa85cdd2d6054db33aa29f61db4b4da7fe8b4532b37239f71fddd4bf2",
+          "status": "success",
+          "block": "62",
+          "blockHash": "0xcc22f15ba0d1d208b47b0bfbeebe145716e981cc2b781d728df69251473dc8c0"
+        },
+        {
+          "label": "action:delay",
+          "txHash": "0x40d9c061b27be173c07e830cf6875054b026ab457690e29f2b1e1bc001c69369",
+          "status": "success",
+          "block": "63",
+          "blockHash": "0xa6a10ad591b088a84892fa02c405209e2087d2577562ccd96fc77240f51b9995"
+        },
+        {
+          "label": "release:delay",
+          "txHash": "0xf6776501eb5c00306fa867dd1b5b21511adc1a5623aaa13261a0b49796ff5d44",
+          "status": "reverted",
+          "block": "64",
+          "blockHash": "0xd4e57b7dc7bbdf5b1a0319815fd426244c698ab4162118e998e98509a2646d24"
+        },
+        {
+          "label": "verdict:freeze",
+          "txHash": "0x5ad84264dfd1ba22511527c08dcf1dd0efceb28f64b3f88904559d10d40b2316",
+          "status": "success",
+          "block": "65",
+          "blockHash": "0x06894e5621ddb934876818759b664ee322ef6ed74329814e5d7797cf8dcd53c0"
+        },
+        {
+          "label": "action:freeze",
+          "txHash": "0x6a0955aa5abd82c2d16edc1eb43656f19027a4fdc7d963a4c1687137f063e44a",
+          "status": "success",
+          "block": "66",
+          "blockHash": "0x7f11c5e1190cce6c9d1cbfa03e19cb9c43296883d08aad6d3af4bc4d2d7a8c08"
+        },
+        {
+          "label": "release:freeze",
+          "txHash": "0x484a8f81357253d0d98170bb57cb9c1ba718cbad2a995139523c3be9635180e8",
+          "status": "reverted",
+          "block": "67",
+          "blockHash": "0x707b63994f2e72b255b4e205397f2dfcf78dcda04ce106745ba86899ed7c6905"
+        },
+        {
+          "label": "reject:tampered-signature",
+          "txHash": "0x90189def1615b37dff026c8a15f24b6e24dae6a9842c45f8887538cdb783599a",
+          "status": "reverted",
+          "block": "68",
+          "blockHash": "0xdaf256193c92f619d0eb8cf2ed9a9eb7e34c2414c8eb610867f06b2074aeba82"
+        },
+        {
+          "label": "reject:duplicate-verdict",
+          "txHash": "0xe1366b901950c12fe67e4743dc7cc2a86c21a328b8128428c34f6ee8803f8537",
+          "status": "reverted",
+          "block": "69",
+          "blockHash": "0x81d146aec14b6a1f6a615d7a8aeb47c3a08648aa58dd256367cde4f8286db571"
+        },
+        {
+          "label": "reject:consumed-action",
+          "txHash": "0x8172e27dc45193fc0b9bbfc5f2a93156ce76a25289e9772c81d1ca2f1855aa08",
+          "status": "reverted",
+          "block": "70",
+          "blockHash": "0xc057a7c82c8fe119bb0e225b0a79bd21b127aead87b3c875d2b4b2da1afe9d1e"
+        },
+        {
+          "label": "owner:reset",
+          "txHash": "0x6f6b96ba48ffc50aa70c1dee47147b7703158a20124651011df87fbc6b5a1609",
+          "status": "success",
+          "block": "71",
+          "blockHash": "0x3c06a6fb0f2bd1fa8e69c5e961ed6a6ea5a1e0b8615f4786d2c0ce683a8831cd"
+        },
+        {
+          "label": "release:after-reset",
+          "txHash": "0x7574618c9c39fc0723d0eea51320c873c56be96a28b3a24644590615a602f95e",
+          "status": "success",
+          "block": "72",
+          "blockHash": "0x24c499b2529881deac602bfc702c0059977c52eaa43195d6857fc62aacd470d0"
+        }
+      ],
+      "checks": {
+        "exactFunding": true,
+        "benign": true,
+        "nearMiss": true,
+        "cumulativeCap": true,
+        "delay": true,
+        "freeze": true,
+        "tamper": true,
+        "duplicate": true,
+        "consumedAction": true,
+        "ownerReset": true,
+        "resetPreservesOutflow": true
+      }
+    }
+  ],
+  "windowAdvances": [
+    {
+      "beforeRun": 2,
+      "timestamp": "1791523662",
+      "localTimeTravel": true
+    },
+    {
+      "beforeRun": 3,
+      "timestamp": "1791527262",
+      "localTimeTravel": true
+    }
+  ],
+  "startedAt": "2026-10-09T04:27:42.725Z",
+  "receiptCount": 70,
+  "elapsedSeconds": 5.065256292
+}

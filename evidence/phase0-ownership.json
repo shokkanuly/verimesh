@@ -1,0 +1,27 @@
+{
+  "task": "F-01",
+  "date": "2026-10-07",
+  "chainId": 10143,
+  "deploymentSource": "deployments/monad-testnet.json",
+  "agentId": "2009",
+  "readsBlockPinned": false,
+  "agentOwner": {
+    "verified": true,
+    "observedBlock": "68897745",
+    "address": "0xA6701287AEE3d8cC95eb9bFA4B8708a1A44Cf5f4"
+  },
+  "sentinelPublicKey": {
+    "verified": true,
+    "observedBlock": "68897372",
+    "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+    "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a",
+    "epoch": 1,
+    "active": true,
+    "matchesPublicTestFixture": true
+  },
+  "guardianOwner": {
+    "verified": false,
+    "reason": "owner() read failed or was unavailable on the historical deployment; no ownership inference"
+  },
+  "transactionsBroadcast": 0
+}

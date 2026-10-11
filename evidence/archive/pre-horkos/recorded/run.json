@@ -1,0 +1,36 @@
+{
+  "mode": "offline",
+  "provenance": "synthetic",
+  "model": {
+    "name": "tripwire-rules",
+    "version": "2.0.0",
+    "hash": "0xbc68e549ee283f4b1f5aef1cd8f8dd8180e65d6329fd54376c177e8498ebb2e0"
+  },
+  "results": [
+    {
+      "incidentId": "benign",
+      "verdictId": "0x1cfdceae16d9610adbbc8cabf6b34db021e67d162e5d77e9a9351b0c3a2cf564",
+      "scoreBps": 550
+    },
+    {
+      "incidentId": "near-miss",
+      "verdictId": "0x3a4e4d5f8a73dffffc61a6659be21eccc8073d5c4cb6af01d3c9806819e38fd4",
+      "scoreBps": 6200
+    },
+    {
+      "incidentId": "throttle",
+      "verdictId": "0xb3d25a5c23a618ad8f446735306cbeb61a5260272550f4fce7a68635d687e960",
+      "scoreBps": 7300
+    },
+    {
+      "incidentId": "delay",
+      "verdictId": "0x80f651124085af37d8fc86ee74b3ae6908ae239f2b69868fbceb3e595f570053",
+      "scoreBps": 8900
+    },
+    {
+      "incidentId": "freeze",
+      "verdictId": "0xac493e889b7313f01eb5c6396c17d79ff824e183f9e410bba27f388c7f05e0fd",
+      "scoreBps": 9900
+    }
+  ]
+}

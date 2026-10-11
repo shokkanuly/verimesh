@@ -1,0 +1,97 @@
+{
+  "scope": "all-local-git-history",
+  "passed": false,
+  "findingsCount": 18,
+  "findings": [
+    {
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "3e40e5e1ff89fb8dd581c03c34885f802f1b14da",
+      "type": "generic-api-key"
+    },
+    {
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "3e40e5e1ff89fb8dd581c03c34885f802f1b14da",
+      "type": "generic-api-key"
+    },
+    {
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "3e40e5e1ff89fb8dd581c03c34885f802f1b14da",
+      "type": "generic-api-key"
+    },
+    {
+      "file": "apps/dashboard/src/config.ts",
+      "commit": "3e40e5e1ff89fb8dd581c03c34885f802f1b14da",
+      "type": "generic-api-key"
+    },
+    {
+      "file": "packages/sentinel/src/replay.ts",
+      "commit": "c07fcc2ab5a52021a00d42dc6e03f5585df71d05",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "scripts/integrator-demo.ts",
+      "commit": "3c96496f7020b81cbed7ee5d9ccfe67a750c1f45",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "scripts/integrator-demo.ts",
+      "commit": "3c96496f7020b81cbed7ee5d9ccfe67a750c1f45",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "scripts/demo-tripwire.ts",
+      "commit": "feac3c46041779e0011e8c09ee393aa713320927",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "scripts/demo-tripwire.ts",
+      "commit": "feac3c46041779e0011e8c09ee393aa713320927",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "test-vectors/verdict-vectors.json",
+      "commit": "8ca1e0fe4895dd7e159a5325f485b75db80f26ef",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": ".env.example",
+      "commit": "05284568ee7580337f41ff2ee90e500934d4bcd6",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": ".env.example",
+      "commit": "05284568ee7580337f41ff2ee90e500934d4bcd6",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "contracts/lib/forge-std/test/StdCheats.t.sol",
+      "commit": "05284568ee7580337f41ff2ee90e500934d4bcd6",
+      "type": "verimesh-private-key-assignment"
+    },
+    {
+      "file": "contracts/lib/openzeppelin-contracts/lib/forge-std/test/StdCheats.t.sol",
+      "commit": "05284568ee7580337f41ff2ee90e500934d4bcd6",
+      "type": "verimesh-private-key-assignment"
+    }
+  ]
+}

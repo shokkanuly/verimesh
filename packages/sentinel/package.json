@@ -1,0 +1,27 @@
+{
+  "name": "@horkos/sentinel",
+  "version": "0.1.0",
+  "description": "Deterministic sentinel pipeline and evidence server",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./model": "./dist/score/model.js",
+    "./score": "./dist/score/rules.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "start": "START_SERVER=true node dist/server.js",
+    "replay": "node dist/replay.js"
+  },
+  "dependencies": {
+    "@horkos/sdk": "workspace:*",
+    "viem": "^2.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}

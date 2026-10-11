@@ -1,0 +1,16 @@
+{
+  "name": "tripwire-rules",
+  "version": "1.0.0",
+  "tiers": {
+    "throttleBps": 6500,
+    "delayBps": 8500,
+    "freezeBps": 9500
+  },
+  "weights": {
+    "proofMismatch": 9500,
+    "unbackedPayout": 9000,
+    "velocitySurge": 8500,
+    "counterpartyFlagged": 8500,
+    "sizeDeviation": 6500
+  }
+}

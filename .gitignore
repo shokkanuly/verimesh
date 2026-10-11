@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Foundry / Solidity
+contracts/out/
+contracts/cache/
+**/broadcast/**
+deployments/.pending/
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo
+evidence/replay/
+evidence/archive-local/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+keystore/
+keystores/
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db

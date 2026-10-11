@@ -1,0 +1,439 @@
+{
+  "version": 2,
+  "vectors": [
+    {
+      "name": "valid",
+      "description": "Standard valid verdict on Monad testnet",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0x0ef146c5d761c45799825b8feee3e3ca40baab105ff8fe27af511d8015f0343f",
+      "digest": "0x641830d282a1e0a769187b04cd674ef9633956c9949ad2502c5aafc496f6a7a9",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": true,
+      "expectedValid": true
+    },
+    {
+      "name": "tweaked_score",
+      "description": "Same inputs but scoreBps is tweaked from 8500 to 9500",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0x48c5b5dcb540fe0d3f93c938c10fea78b1128b7cbcfc7e287a7f70ca056a2eea",
+      "digest": "0x9cb61f21149ae1cebe1f51c03375c7268513c18031e1e7eed0e159a970a71f0e",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 9500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x16206125f260b3281aba80e35fd3a4346119ee5f90091d1362cce15cd1062b22",
+        "s": "0x0c0755fcf93055c3274e5a376316452023207289c8fc55acf4db020b5631113f"
+      },
+      "signatureValid": true,
+      "expectedValid": true
+    },
+    {
+      "name": "tweaked_model",
+      "description": "Same inputs but modelHash is altered by 1 byte",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0xeeb80c6a12bd7aa0bbc2420573769874efbc189694ae6db42edc0fab1e6306c5",
+      "digest": "0x93258f655d0189b00cdc7bf790de228d74110496c67a8a8421e1ccbcbdeea87a",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x11111111111111111111111111111111111111111111111111111111111111ff",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x6936b64f144bcf02e4091e03629f8549b8f3a98aac631a0c4916f8ece52dbf8c",
+        "s": "0x294b553950530767d22aaef22731c6d5e5c29415b4f85e7356e3dc190d6cf028"
+      },
+      "signatureValid": true,
+      "expectedValid": true
+    },
+    {
+      "name": "wrong_chain_id",
+      "description": "Verdict signed for Ethereum Mainnet (chainId 1) instead of Monad testnet (chainId 10143)",
+      "chainId": 1,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2d048c68b13d129df85d5b821ff7a55ac5352dc06ea498adaaa37be4b9afe945",
+      "structHash": "0x0ef146c5d761c45799825b8feee3e3ca40baab105ff8fe27af511d8015f0343f",
+      "digest": "0xe1862c854cba79adef443ea381e2f93238e36c40bee020535ecb5959f6232e5e",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x6439af2bb6f16fe3c0bd80834053d5ab17af5682734505e6176b938a86e7201a",
+        "s": "0x431a731e9ef30ffd1cde5eb154e756408c860aaa3532a9f397f6877aec0875db"
+      },
+      "signatureValid": true,
+      "expectedValid": false
+    },
+    {
+      "name": "expired",
+      "description": "Verdict with expiry in the past (observedAt 1000, expiry 1600)",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0xa41279156cb75262d818d2d5434293dd3e13832edfd34e7d65fad79cff3a43d7",
+      "digest": "0x091f6657ed475e8ad2aaf33460169ae2e13742f5eeed5b5c0d0e64738c40551d",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1000,
+        "expiry": 1600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x2aa62c938f8793419831933876c338b8b8bd069a6b77a6ff115b2f0f0f95d86a",
+        "s": "0x4c9b7871452a14f2772ac6f82144aa32d0ee1baecea2cb13e3448b3334c2a046"
+      },
+      "signatureValid": true,
+      "expectedValid": false
+    },
+    {
+      "name": "tampered_agentId",
+      "description": "Changed agentId without re-signing",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0xd3e4982815bea87bc7c766730f886b87b89730a8159f52064daa5f216a499996",
+      "digest": "0xb7169bcd58212a79d804022f0eb7906b12d876221cb9e8d2bb732bbdf9e0167e",
+      "verdict": {
+        "agentId": "2",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": false,
+      "expectedValid": false
+    },
+    {
+      "name": "tampered_modelHash",
+      "description": "Changed modelHash without re-signing",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0xde2c22e1bc587a6426944089a1dab6da8006ef6bdb1a58504614e367c8906ce8",
+      "digest": "0x45c33fb57b297f1142a6e495a373b37455b67680d44b226ca489ef7430ab4e4a",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1212121212121212121212121212121212121212121212121212121212121212",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": false,
+      "expectedValid": false
+    },
+    {
+      "name": "tampered_inputHash",
+      "description": "Changed inputHash without re-signing",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0xaa7a9588cbe779791db88c9555e6c06e2edaffe7cae2abc6bfa0d409c3a2f0be",
+      "digest": "0x8830bb65320f504b317e808611201523ac39f61a992580dfd54c037172ff4302",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2323232323232323232323232323232323232323232323232323232323232323",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": false,
+      "expectedValid": false
+    },
+    {
+      "name": "tampered_policyId",
+      "description": "Changed policyId without re-signing",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0x6af03efbce3bf540512d33666be60bee5b0f100d65589296b5e713ea0dcc6c06",
+      "digest": "0x24510efe49033dd7cdfe019b33e2b6a13059ab1f3f23d33caa09b4e00552c3ed",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3434343434343434343434343434343434343434343434343434343434343434",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": false,
+      "expectedValid": false
+    },
+    {
+      "name": "tampered_scoreBps",
+      "description": "Changed scoreBps without re-signing",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0xb2ccadea8f73fb6c4db7e2472369716dc82761ccb859c8559794a032f939dda6",
+      "digest": "0xc81f1e10b6c2a79d0417e53634e705630eb15aff4fc3b6bae7d12c99e7f81b16",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8501,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": false,
+      "expectedValid": false
+    },
+    {
+      "name": "tampered_observedAt",
+      "description": "Changed observedAt without re-signing",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0xdce280e65327b7448250e4cb2c0c90ecb5eb436335050998a058f356bc28cd75",
+      "digest": "0x27f820d58c489a21629e29221e765b8dd0e1aeecd621804ffe7973a6fe75c116",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000001,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": false,
+      "expectedValid": false
+    },
+    {
+      "name": "tampered_expiry",
+      "description": "Changed expiry without re-signing",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0xdbf83bff72bbfbc78679d1d0b047fd23634af6918d4e47b9dbba18ad0cf9441e",
+      "digest": "0x66ca88a68a8c780c7be183425b826b078811ca13692377bf04aa04896c152ffd",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003601,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": false,
+      "expectedValid": false
+    },
+    {
+      "name": "tampered_nonce",
+      "description": "Changed nonce without re-signing",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000beef",
+      "domainSeparator": "0x2f9a048c07cd9ec4ab7528575b980e59d114ca6d91633b99ca580337234ed640",
+      "structHash": "0x011bae0f9e24c8489b8dadf8e92757e69008bab844f2b498c26cf78c3cc62f3d",
+      "digest": "0x688340d6ac63ac40fa1241cc0e08824b659f348c60e6655274cab76712a76f0b",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 43
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0x7889b6314c145ec2408b2216249a18c53b11185fdd11e22b6893a76ba74e445a",
+        "s": "0x3bd91bcc4e1bb86331cfb4034fe10d741d94519e7acd7f539d55138bddc2b533"
+      },
+      "signatureValid": false,
+      "expectedValid": false
+    },
+    {
+      "name": "wrong_registry",
+      "description": "Signed for a different registry domain",
+      "chainId": 10143,
+      "verifyingContract": "0x000000000000000000000000000000000000cafe",
+      "domainSeparator": "0xa6bf468569fad1f21fd169f9bb74cd6cc9afac36322e8c3bd81b2412a4fe6b9d",
+      "structHash": "0x0ef146c5d761c45799825b8feee3e3ca40baab105ff8fe27af511d8015f0343f",
+      "digest": "0x8cb5045368bee01e88b66bf7775daf85ca84175ab3af397f5307e883b71b735b",
+      "verdict": {
+        "agentId": "1",
+        "modelHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "inputHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+        "policyId": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "scoreBps": 8500,
+        "observedAt": 1700000000,
+        "expiry": 1700003600,
+        "nonce": 42
+      },
+      "signer": {
+        "publicKey": {
+          "x": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+          "y": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+        }
+      },
+      "signature": {
+        "r": "0xaa77b7f5e40081f15e88de6c60928401fffd48353727532dab5de04c82382810",
+        "s": "0x616268a997f4d46427b224fccc49cef3b8f194d64ae5692eab184fb3dca0ce36"
+      },
+      "signatureValid": true,
+      "expectedValid": false
+    }
+  ]
+}

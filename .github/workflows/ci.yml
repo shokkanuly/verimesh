@@ -1,0 +1,148 @@
+name: CI
+
+on:
+  push:
+    branches: [main, fix/ship, 'codex/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    name: Foundry Contracts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.4
+      - name: Build contracts
+        run: |
+          cd contracts
+          forge build
+      - name: Run tests
+        run: |
+          cd contracts
+          forge test
+      - name: Check scoped operation gas
+        run: |
+          cd contracts
+          MONAD_RPC_URL= forge test --match-contract OperationGasTest --gas-snapshot-check true
+
+  typescript:
+    name: TypeScript & Vectors Parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build packages
+        run: pnpm -r --if-present build
+      - name: Run tests
+        run: pnpm test
+      - name: Static checks
+        run: pnpm lint
+      - name: Address consistency
+        run: pnpm check:addresses
+
+  parity:
+    name: Shared Input and Verdict Digest Parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.4
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check:parity
+
+  quickstart:
+    name: Clean Quickstart and Sandbox
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.4
+      - run: node scripts/clean-checkout-check.mjs --workspace
+      - name: Three-run local enforcement rehearsal
+        run: node scripts/demo-rehearse.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: local-synthetic-demo-rehearsal
+          path: evidence/replay/rehearsal/
+
+  browser:
+    name: Dashboard Desktop and Mobile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm check:dashboard
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dashboard-synthetic-test-screens
+          path: evidence/replay/screens/
+
+  secrets:
+    name: History Secrets Gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install pinned scanner and verify release checksum
+        run: |
+          curl -fsSL https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz -o /tmp/gitleaks.tar.gz
+          curl -fsSL https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_checksums.txt -o /tmp/gitleaks-checksums.txt
+          expected=$(awk '$2 == "gitleaks_8.30.1_linux_x64.tar.gz" {print $1}' /tmp/gitleaks-checksums.txt)
+          test -n "$expected"
+          printf '%s  /tmp/gitleaks.tar.gz\n' "$expected" | sha256sum -c -
+          tar -xzf /tmp/gitleaks.tar.gz -C /tmp gitleaks
+      - run: node scripts/test-secret-hygiene.mjs /tmp/gitleaks
+      - name: Scan all history with metadata-only output
+        run: node scripts/scan-secrets.mjs
+        env:
+          GITLEAKS_BIN: /tmp/gitleaks

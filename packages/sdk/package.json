@@ -1,0 +1,21 @@
+{
+  "name": "@horkos/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Horkos registry and verifier",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.8.1",
+    "viem": "^2.23.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}

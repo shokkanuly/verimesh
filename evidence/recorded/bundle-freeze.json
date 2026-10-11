@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "chainId": 10143,
+  "registry": "0x000000000000000000000000000000000000bEEF",
+  "verdictId": "0xce4e410f0b80fd6e5fb09acf31150dd262ebf3d6a28ddb0937a43f20be4cd0a4",
+  "normalizedEvent": {
+    "routeId": "0x1234000000000000000000000000000000000000000000000000000000005678",
+    "amount": "500000000000000000000000",
+    "sourceChainId": "1",
+    "targetChainId": "10143",
+    "recipient": "0x000000000000000000000000000000000000bEEF",
+    "timestamp": 1700000000,
+    "nonce": "46"
+  },
+  "features": {
+    "proofMismatch": 1,
+    "unbackedPayout": 0,
+    "velocitySurgeBps": 6000,
+    "counterpartyFlagged": 0,
+    "sizeRatioBps": 4000
+  },
+  "model": {
+    "name": "tripwire-rules",
+    "version": "2.0.0",
+    "hash": "0xbc68e549ee283f4b1f5aef1cd8f8dd8180e65d6329fd54376c177e8498ebb2e0"
+  },
+  "verdict": {
+    "agentId": "2009",
+    "scoreBps": 9900,
+    "policyId": "0x525d333562560ca0925ad5f53938a213d76d3de1867ee9bec81b5f298906cc7d",
+    "observedAt": 1700000000,
+    "expiry": 1700000600,
+    "nonce": "46"
+  },
+  "signature": {
+    "r": "0xf08327f083a1963d2cb50309e35152b3b9b16da30f4833bb6606e0b3d70c71fd",
+    "s": "0x61f3ac63c3816e86ee0c237d5e3007bce8610c493a41924d32c461c6d5f8f4fd",
+    "keyX": "0x6ff03b949241ce1dadd43519e6960e0a85b41a69a05c328103aa2bce1594ca16",
+    "keyY": "0x3c4f753a55bf01dc53f6c0b0c7eee78b40c6ff7d25a96e2282b989cef71c144a"
+  }
+}

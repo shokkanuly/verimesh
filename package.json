@@ -1,0 +1,41 @@
+{
+  "name": "horkos-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r --if-present build",
+    "test": "node --test scripts/check-addresses.test.mjs scripts/check-parity.test.mjs scripts/deployment-checks.test.mjs scripts/deploy-workflow.test.mjs scripts/demo-scenes.test.mjs scripts/demo-live.test.mjs scripts/clean-checkout-check.test.mjs && pnpm -r --if-present test",
+    "check:addresses": "node scripts/check-addresses.mjs",
+    "test:fork": "node scripts/test-fork.mjs",
+    "vectors:generate": "node scripts/gen-vectors.js && node scripts/gen-input-vectors.mjs",
+    "check:parity": "node scripts/check-parity.mjs",
+    "verify:deployment": "node scripts/verify-deployment.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "deploy:preflight": "node scripts/deploy-preflight.mjs",
+    "ship:deploy": "node scripts/ship-deploy.mjs",
+    "ship:demo": "node scripts/ship-demo.mjs",
+    "verify:source": "node scripts/verify-source.mjs",
+    "deploy:prepare": "node scripts/deploy-workflow.mjs prepare",
+    "deploy:publish": "node scripts/deploy-workflow.mjs publish",
+    "demo:preflight": "node scripts/demo-preflight.mjs",
+    "demo": "pnpm build && node scripts/demo-launch.mjs",
+    "demo:rehearse": "pnpm build && node scripts/demo-rehearse.mjs",
+    "demo:live": "node scripts/demo-live.mjs",
+    "lint": "node scripts/lint.mjs",
+    "check:secrets": "node scripts/scan-secrets.mjs",
+    "replay": "pnpm --filter @horkos/sentinel replay",
+    "sandbox": "pnpm build && node scripts/sandbox.mjs",
+    "check:checkout": "node scripts/clean-checkout-check.mjs",
+    "check:dashboard": "node scripts/check-dashboard.mjs",
+    "verify-bundle": "node packages/cli/dist/verify-bundle.js",
+    "verify:testnet": "node --experimental-strip-types scripts/verify-testnet.ts"
+  },
+  "devDependencies": {
+    "@noble/curves": "^2.4.0",
+    "cborg": "^4.5.8",
+    "playwright": "1.62.1",
+    "typescript": "^5.8.2",
+    "viem": "^2.57.2",
+    "vitest": "^3.0.7"
+  }
+}

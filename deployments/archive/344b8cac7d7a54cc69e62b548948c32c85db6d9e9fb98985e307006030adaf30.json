@@ -1,0 +1,12 @@
+{
+  "chainId": 10143,
+  "network": "monad-testnet",
+  "rpcUrl": "https://testnet-rpc.monad.xyz",
+  "explorerUrl": "https://testnet.monadscan.com",
+  "contracts": {
+    "ERC8004Identity": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+    "VerdictRegistry": "0xEa695145d4b0405E21eb35a359A1CC3E7F756266",
+    "TripwireGuardianV2": "0xb8a1C56a117446023a45346Bc51aAA6bB46DB26E",
+    "SimpleGate": "0xC520c3B91057320f599f5870E53e61c77C56d4ac"
+  }
+}

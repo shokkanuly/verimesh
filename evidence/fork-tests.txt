@@ -1,0 +1,41 @@
+F-13 read-only fork evidence
+Checked: 2026-10-11T14:26:12.261Z
+Chain: 10143
+Pinned block: 70134794
+Command: forge test --rpc-url [MONAD_RPC_URL] --fork-block-number 70134794 --match-contract ForkTest -vv
+
+No files changed, compilation skipped
+
+Ran 6 tests for test/Fork.t.sol:ForkTest
+[PASS] test_Fork_FullVerdictFlow_WithLivePrecompileAndERC8004() (gas: 658182)
+Logs:
+  Monad fork block: 70134794
+
+[PASS] test_Fork_LiveERC8004_QueryOwner() (gas: 46533)
+Logs:
+  Monad fork block: 70134794
+
+[PASS] test_Fork_P256Precompile_AcceptsVectorSignature() (gas: 17647)
+Logs:
+  Monad fork block: 70134794
+
+[PASS] test_Fork_P256Precompile_RejectsTamperedDigest() (gas: 17327)
+Logs:
+  Monad fork block: 70134794
+
+[PASS] test_Fork_P256Precompile_RejectsTamperedPublicKey() (gas: 17284)
+Logs:
+  Monad fork block: 70134794
+
+[PASS] test_Fork_P256Precompile_RejectsTamperedSignature() (gas: 17327)
+Logs:
+  Monad fork block: 70134794
+
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 4.54s (4.13s CPU time)
+
+Ran 1 test suite in 5.32s (4.54s CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)
+2026-10-11T14:26:16.503243Z  WARN evm::traces::external: etherscan config not found
+2026-10-11T14:26:17.274202Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/aibek/.foundry/cache/rpc/monad-testnet/70134794"
+2026-10-11T14:26:19.529035Z  WARN foundry_fork_db::cache: Failed to read cache file err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/Users/aibek/.foundry/cache/rpc/monad-testnet/70134794"
+
+Result: PASS: all six tests ran, no skips

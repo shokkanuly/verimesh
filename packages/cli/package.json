@@ -1,0 +1,23 @@
+{
+  "name": "@horkos/cli",
+  "version": "0.1.0",
+  "description": "CLI tool for Horkos bundle verification",
+  "type": "module",
+  "bin": {
+    "horkos": "./dist/verify-bundle.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@horkos/sdk": "workspace:*",
+    "@horkos/sentinel": "workspace:*",
+    "viem": "^2.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}
