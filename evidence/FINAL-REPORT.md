@@ -91,7 +91,7 @@ The following counts are actual runs, not user/adopter estimates or summed subse
 | Vercel adapter locally | [Eight actual checks](ship/P4-vercel-local.json), raw/preparsed JSON, tamper, 64 KiB bound; not a hosted deployment |
 | Clean tracked tree scan | Exit 0, **0 findings**, pinned Gitleaks 8.30.1; [metadata proof](ship/P5-scan.json) |
 | Preserved legacy all-branch history scan | Exit 1, **3 key-fixture findings**; retained privately and not waived |
-| Clean repository remote CI | [Actual push run](https://github.com/shokkanuly/verimesh/actions/runs/38163310982) completed: **6 jobs pass / 0 fail**, including the unchanged full-history secrets gate with **0 findings** |
+| Clean repository remote CI | [Actual push run](https://github.com/shokkanuly/verimesh/actions/runs/38232881886) completed: **6 jobs pass / 0 fail**, including the unchanged full-history secrets gate with **0 findings** |
 | Hosted HTTPS/API and browser | Actual protected preview passes: ten bundles, read-only API, 5 verdicts / 3 actions, exact links, PASS / MISMATCH / restored PASS, moving desktop/mobile canvas, no overflow/errors |
 | Form submission | Not run or confirmed |
 
@@ -133,19 +133,22 @@ canonical block state. RPC failures never become recorded-row success.
 [Vercel configuration](../vercel.json) and [hosting handoff](../docs/09-hosting.md)
 are configured and deployed after green CI. The human completed the local CLI
 authentication refresh. Actual verified
-[protected preview](https://horkos-47272hzcx-aibekshokan-6139.vercel.app) and
-[LIVE reader](https://horkos-47272hzcx-aibekshokan-6139.vercel.app/dashboard?mode=live)
-require Vercel login. Preview deployment `dpl_2foYvC2YMsFWrss6vf1UeoD12zwo`
-runs source snapshot `f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9` on Node 22.
+[protected preview](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app) and
+[LIVE reader](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app/dashboard?mode=live)
+require Vercel login. Preview deployment `dpl_C5ywJ8UGVikidEDfqf15Q8p9ZmC1`
+runs reviewed application commit `5f3859e05481a27f9fd129fba9ede00b5cf747da` on Node 22.
+Later commits update delivery documents only, not the tested application.
 Actual API health is read-only / ten bundles / zero rejected files. Uploads
 return 405, unknown origins 403, valid oversized JSON 413. Desktop/mobile canvas
 pixels are nonblank and change over time; assets load, deep links refresh,
 and the browser shows five real accepted events / three matching actions.
+All five Registry and three Guardian explorer links match actual replay receipts;
+the three approved protected-preview status labels are checked in both viewports.
 Verification passes, an altered feature mismatches, and restoration passes.
 The completed hosted acceptance also checks visible scroll-reveal sections,
 FAQ toggles and mobile navigation/Escape. Composited screenshot pixels sampled
 outside UI overlays confirm the live 3D scene on both viewports, with no lost
-WebGL context. Final acceptance completed October 12 at 13:11 GMT+5.
+WebGL context. Final acceptance completed October 12 at 14:59 GMT+5.
 No transactions were broadcast during hosting or QA.
 
 Automatic production-domain assignment is disabled. The initial Git API build
@@ -178,8 +181,12 @@ Dashboard Desktop and Mobile, and History Secrets Gate. The latter runs the
 original pinned scanner over all reachable history and reports zero findings.
 The first remote quickstart includes a three-run **local
 SYNTHETIC** rehearsal with 70 receipts; this is not three Monad testnet runs.
-The pushed snapshot's local `pnpm test` was repeated and exits 0 (270 Node +
-121 package tests); its full snapshot-history scan still has zero findings.
+The approved application follow-up's local `pnpm test` exits 0 (270 Node +
+121 package tests), in both workspaces. A fresh isolated checkout of `5f3859e`
+also passes all 20 steps in 34.28 s, including 146 offline Solidity tests with
+six explicit native-fork skips, parity and all five bundles. No tracked source
+changes occur. The native fork was not repeated; full clean-history scanning
+still has zero findings. Existing JSON acceptance records remain historical.
 
 Earlier failed attempts were retained as facts: RPC publication initially hit
 Monad's 100-block limit, fixed without another deployment; clean checkout's

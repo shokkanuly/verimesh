@@ -21,12 +21,12 @@ No form has been opened or submitted by the agent.
   history is imported and the initial root is unchanged.
   Old `main` and all previous commits remain unchanged in the private
   [legacy repository](https://github.com/shokkanuly/verimesh-legacy-private).
-- [x] Remote CI green. [Actual clean-repository run](https://github.com/shokkanuly/verimesh/actions/runs/38163310982)
+- [x] Remote CI green. [Actual clean-repository run](https://github.com/shokkanuly/verimesh/actions/runs/38232881886)
   completed: all six jobs pass, including the unchanged full-history secrets
   gate with zero findings. No gate was waived and no history was force-pushed.
 - [ ] Judge access confirmed for `metropolis@hackathon.monad.xyz`, or approved
   public release. Nothing may be made public before the human says "publish".
-- [x] [Protected Vercel preview](https://horkos-47272hzcx-aibekshokan-6139.vercel.app)
+- [x] [Protected Vercel preview](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app)
   deployed and actual HTTPS/API, desktop/mobile, 3D movement and LIVE evidence
   checks pass. Vercel sign-in is required; no public publication is authorized.
   [Runbook](docs/09-hosting.md); no operator keys were uploaded.
@@ -101,10 +101,10 @@ explicitly; do not present localhost as an accessible hosted product.
 |---|---|
 | Clean private repository | [verimesh](https://github.com/shokkanuly/verimesh), new repository ID 1414641348 |
 | Preserved private history | [verimesh-legacy-private](https://github.com/shokkanuly/verimesh-legacy-private), original repository ID 1410630641; no commits deleted or rewritten |
-| Clean release branch | [codex/release](https://github.com/shokkanuly/verimesh/tree/codex/release), default branch, source snapshot `f5933b2` |
-| Remote CI / judge access | [Clean push run](https://github.com/shokkanuly/verimesh/actions/runs/38163310982): all six jobs pass; judge access unconfirmed |
-| Dashboard / API | [Protected preview](https://horkos-47272hzcx-aibekshokan-6139.vercel.app) / same-origin `/api`; Vercel login required |
-| LIVE reader | [Five real verdicts / three actions](https://horkos-47272hzcx-aibekshokan-6139.vercel.app/dashboard?mode=live); synthetic inputs |
+| Clean release branch | [codex/release](https://github.com/shokkanuly/verimesh/tree/codex/release), default branch, initial snapshot `f5933b2`; tested application `5f3859e` |
+| Remote CI / judge access | [Clean push run](https://github.com/shokkanuly/verimesh/actions/runs/38232881886): all six jobs pass; judge access unconfirmed |
+| Dashboard / API | [Protected preview](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app) / same-origin `/api`; Vercel login required |
+| LIVE reader | [Five real verdicts / three actions](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app/dashboard?mode=live); synthetic inputs |
 | Deployment | [Canonical addresses and hashes](deployments/monad-testnet.json) |
 | One LIVE run | [replay.json](evidence/live/replay.json); 20 scene receipts + funding, six expected reverts |
 | Demo / pitch / optional ad | Human recording/upload pending |
