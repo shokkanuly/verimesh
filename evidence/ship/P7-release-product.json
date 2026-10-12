@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-11T15:37:43.362Z",
+  "snapshotCommit": "f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9",
+  "launcher": "pnpm demo",
+  "hosting": "LOCAL ONLY",
+  "transactionsBroadcast": 0,
+  "checks": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "pixels": {
+        "nonblank": 8268,
+        "distinct": 1420,
+        "width": 1440,
+        "height": 1040
+      },
+      "movement": true,
+      "overflow": false,
+      "brokenImages": [],
+      "browserErrors": []
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "pixels": {
+        "nonblank": 1644,
+        "distinct": 489,
+        "width": 390,
+        "height": 1010
+      },
+      "movement": true,
+      "overflow": false,
+      "brokenImages": [],
+      "browserErrors": []
+    }
+  ],
+  "health": {
+    "service": "Horkos Evidence API",
+    "status": "ok",
+    "mode": "read-only",
+    "verification": "offline-signature-and-scorer",
+    "storedBundlesCount": 10,
+    "rejectedFiles": 0
+  }
+}

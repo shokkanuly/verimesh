@@ -1,7 +1,12 @@
 # Vercel Hosting Runbook
 
-October 11, 2026: prepared and locally tested, **not deployed**. The human will
-deploy to Vercel. No product deployment URL or hosted acceptance is claimed.
+October 12, 2026: **protected preview deployed and tested**. All six CI jobs
+pass in the [clean private repository](https://github.com/shokkanuly/verimesh/actions/runs/38163310982).
+The human approved a protected preview and completed the CLI authentication
+refresh. [Preview](https://horkos-47272hzcx-aibekshokan-6139.vercel.app),
+[LIVE reader](https://horkos-47272hzcx-aibekshokan-6139.vercel.app/dashboard?mode=live).
+Vercel login is required. Unauthenticated requests redirect to authentication.
+No public release, judge access or production promotion is authorized.
 
 ## Import Settings
 
@@ -12,11 +17,13 @@ publication. Never import the old scan-failing history.
 | Setting | Value |
 |---|---|
 | Root Directory | Repository root, not `apps/dashboard` |
+| Repository / Branch | `shokkanuly/verimesh` / `codex/release` (default) |
+| Target | Protected Preview only; production/public access requires separate approval |
 | Framework | Vite |
 | Install | `pnpm install --frozen-lockfile` |
 | Build | `pnpm build` |
 | Output | `apps/dashboard/dist` |
-| Node | 22.x or 24.x |
+| Node | 22.x (actual hosted build) |
 | Frontend API | Default same-origin `/api`; do not set `VITE_EVIDENCE_API_URL` |
 
 Committed [vercel.json](../vercel.json) serves static assets and rewrites
@@ -34,8 +41,31 @@ operator `.env` files, PEM/key files, broadcast artifacts and pending journals.
 
 This configuration uses documented [Node handlers](https://vercel.com/docs/functions/runtimes/node-js/advanced-node-configuration),
 [function includeFiles and rewrites](https://vercel.com/docs/project-configuration/vercel-json).
-The actual Vercel build, account limits, deployment and HTTPS checks remain
-human-run. Review provider costs and protection settings before deploying.
+The actual Vercel build, deployment and HTTPS/API checks pass. Keep
+Vercel Authentication enabled, do not expose a production alias, and do not
+import operator secrets. Review provider costs before any paid upgrade.
+
+## Verified Deployment
+
+- Project: `aibekshokan-6139/horkos`, ID `prj_c8TNwZCH56ONyTmgIAtzvv1cRtL9`.
+- Verified preview: `dpl_2foYvC2YMsFWrss6vf1UeoD12zwo`, target Preview,
+  code snapshot `f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9`.
+- Vercel Authentication uses Standard Protection. Automatic production-domain
+  assignment is disabled. The public production domain was checked as 404.
+- Hosted API: read-only, ten bundles, zero rejected files; upload 405,
+  unknown origin 403, valid oversized JSON 413, signature/scorer verification 200.
+- Actual browser RPC: five accepted verdicts, three guardian actions, exact
+  receipt links, PASS then altered-feature MISMATCH then restored PASS.
+- Desktop 1440 x 900 and mobile 390 x 844: nonblank moving canvas, assets loaded,
+  no horizontal overflow or uncaught browser errors; dashboard deep-link refresh works.
+  Visible scroll reveals, FAQ toggles and mobile navigation/Escape also pass.
+  Final hosted acceptance completed October 12 at 13:11 GMT+5, with zero broadcasts.
+
+Use the exact verified preview URL above. Generated branch aliases are not the
+tested application origin. Do not share authentication tokens or bypass links.
+The first Git API request was classified as production, but remained protected
+and unpromoted. The API `staging` attempt rejected development test authentication.
+An explicit CLI `--target preview` deployment resolved the environment mismatch.
 
 ## Acceptance Before Sharing
 

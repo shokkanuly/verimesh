@@ -1,10 +1,14 @@
 # Horkos Ship Report
 
-Updated October 11, 2026. **LIVE engineering delivered; publication and submission
+Updated October 12, 2026. **LIVE engineering and protected hosting delivered; publication and submission
 PARTIAL.** Contracts and one enforcement run are real Monad testnet evidence.
-The human will deploy Vercel, provide an empty private release repository, approve
-publication, record/upload videos and submit the form. Nothing has been made
-public, no outreach was sent, and no submission confirmation exists.
+The clean snapshot is pushed to a fresh private repository at the human's chosen
+URL on default branch `codex/release`. The old repository and `main` are preserved
+unchanged as `verimesh-legacy-private`. All six remote CI jobs pass. A protected
+Vercel preview is deployed and its HTTPS/API, desktop/mobile, movement and LIVE
+verification checks pass. The human must
+approve publication, record/upload videos and submit the form.
+Nothing has been made public, no outreach was sent, and no submission confirmation exists.
 
 ## Live Deployment
 
@@ -61,6 +65,11 @@ not fresh permissions. Read-only demo preflight conservatively refuses leftover
 outflow accounting until the natural one-hour window expires; no safety check
 was relaxed to manufacture readiness.
 
+Final `pnpm run demo:preflight` **exits 0 / ready true** after natural expiry,
+at canonical block **70149471**. Owners, key epoch, allowlists, bridge and all
+four seed receipts match. **Zero transactions broadcast**, no additional reset:
+[actual recording preflight](ship/P7-recording-preflight.json).
+
 ## Verification
 
 Executable source tested at `352ead6421d54e37baa9860b73b13a1c62911493`.
@@ -81,12 +90,36 @@ The following counts are actual runs, not user/adopter estimates or summed subse
 | Read-only API | Ten bundles, zero rejected; uploads 405, unlisted origins 403 |
 | Vercel adapter locally | [Eight actual checks](ship/P4-vercel-local.json), raw/preparsed JSON, tamper, 64 KiB bound; not a hosted deployment |
 | Clean tracked tree scan | Exit 0, **0 findings**, pinned Gitleaks 8.30.1; [metadata proof](ship/P5-scan.json) |
-| Supplied remote all-branch history scan | Exit 1, **3 key-fixture findings**; not waived |
-| Remote CI / hosted HTTPS / form submission | Not run or confirmed |
+| Preserved legacy all-branch history scan | Exit 1, **3 key-fixture findings**; retained privately and not waived |
+| Clean repository remote CI | [Actual push run](https://github.com/shokkanuly/verimesh/actions/runs/38163310982) completed: **6 jobs pass / 0 fail**, including the unchanged full-history secrets gate with **0 findings** |
+| Hosted HTTPS/API and browser | Actual protected preview passes: ten bundles, read-only API, 5 verdicts / 3 actions, exact links, PASS / MISMATCH / restored PASS, moving desktop/mobile canvas, no overflow/errors |
+| Form submission | Not run or confirmed |
 
 The checkout report gives exact local timing; cached dependencies and Anvil are
 not a universal installation-time promise. The Three.js chunk warning is
 non-fatal (528.29 kB raw, 133.11 kB gzip); no performance guarantee is claimed.
+
+The separate release snapshot is created locally at
+`/Users/aibek/Desktop/projects/Horkos-release`, branch `codex/release`, root commit
+`f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9`. That initial snapshot has **one root commit / 864 tracked files**,
+zero tree **and full snapshot-history** scanner findings, and independently passes
+all 20 checkout steps plus runtime/creation verification without the old Git
+object or operator secrets. Its measured quickstart is 15.10 s and complete
+checkout 32.44 s on this cached local toolchain.
+[Snapshot acceptance](ship/P5-release-snapshot.json),
+[actual snapshot checkout report](ship/P5-release-checkout.json).
+The initial snapshot contains the report as of source commit `a94a674`.
+With human approval, the four existing public release/recording reports and
+updated delivery documents are packaged in normal follow-up commits, together
+with three protected-preview status labels and local Vercel ignore entries.
+Historical acceptance records retain their original source hashes and dates;
+they are not relabeled as hosted proof. The initial root is unchanged, no old
+history is imported, and no commit is amended or force-pushed.
+The initial root was pushed unchanged to
+[codex/release](https://github.com/shokkanuly/verimesh/tree/codex/release).
+The actual `pnpm demo` launcher also passes fresh release desktop/mobile
+canvas-pixel/movement checks, image loading and no overflow/runtime errors:
+[release product proof](ship/P7-release-product.json).
 
 ## Product And Release
 
@@ -98,16 +131,55 @@ canonical block state. RPC failures never become recorded-row success.
 
 `pnpm demo` starts keys-free, read-only product services on free loopback ports.
 [Vercel configuration](../vercel.json) and [hosting handoff](../docs/09-hosting.md)
-are prepared; the human chose to deploy. No account deployment or public URL exists.
+are configured and deployed after green CI. The human completed the local CLI
+authentication refresh. Actual verified
+[protected preview](https://horkos-47272hzcx-aibekshokan-6139.vercel.app) and
+[LIVE reader](https://horkos-47272hzcx-aibekshokan-6139.vercel.app/dashboard?mode=live)
+require Vercel login. Preview deployment `dpl_2foYvC2YMsFWrss6vf1UeoD12zwo`
+runs source snapshot `f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9` on Node 22.
+Actual API health is read-only / ten bundles / zero rejected files. Uploads
+return 405, unknown origins 403, valid oversized JSON 413. Desktop/mobile canvas
+pixels are nonblank and change over time; assets load, deep links refresh,
+and the browser shows five real accepted events / three matching actions.
+Verification passes, an altered feature mismatches, and restoration passes.
+The completed hosted acceptance also checks visible scroll-reveal sections,
+FAQ toggles and mobile navigation/Escape. Composited screenshot pixels sampled
+outside UI overlays confirm the live 3D scene on both viewports, with no lost
+WebGL context. Final acceptance completed October 12 at 13:11 GMT+5.
+No transactions were broadcast during hosting or QA.
+
+Automatic production-domain assignment is disabled. The initial Git API build
+was classified as production, but remained authenticated and unpromoted;
+its public production domain was checked as 404. API `staging` did not accept
+development test authentication. The explicit CLI preview succeeds. No public
+publication or judge access is claimed.
 The PNG [logo](../brand/horkos-icon-1024.png) is **1024 x 1024 / 26,462 bytes**.
 
-GitHub metadata confirms [the supplied repository](https://github.com/shokkanuly/verimesh)
-is private with push access. Its existing history scan covers three old key
-fixtures; pushing another root commit there cannot remove those findings.
-An empty private repository URL was requested. Original local/remote history
-was not rewritten, force-pushed or made public. Only a separately scanned fresh
-snapshot is eligible for release, and public visibility still requires "publish".
-No remote CI result, collaborator access or green badge is invented.
+The human approved preserving the existing repository under the private name
+[verimesh-legacy-private](https://github.com/shokkanuly/verimesh-legacy-private)
+(original ID 1410630641) and creating a new private repository at
+[verimesh](https://github.com/shokkanuly/verimesh) (new ID 1414641348).
+Legacy `main` remains `da63215292bc77e86a47b07ebf2e4567c1d0bd79`, and all its
+old commits/branches are preserved. The clean repository contains only the
+release history, with `codex/release` as its default branch.
+The initial `git push --set-upstream origin codex/release` exits 0 and its source
+snapshot is exactly `f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9`.
+Approved delivery/status follow-ups use ordinary child commits in this clean
+release history; the preserved legacy histories remain separate.
+The [earlier failing CI run](https://github.com/shokkanuly/verimesh-legacy-private/actions/runs/38161193411)
+belongs to the preserved legacy repository, not the new release repository.
+No commits were deleted, no history was rewritten or force-pushed, and both
+repositories remain private. Public visibility still requires "publish".
+No collaborator access is claimed.
+
+All six remote jobs pass: Foundry Contracts, TypeScript & Vectors Parity,
+Shared Input and Verdict Digest Parity, Clean Quickstart and Sandbox, and
+Dashboard Desktop and Mobile, and History Secrets Gate. The latter runs the
+original pinned scanner over all reachable history and reports zero findings.
+The first remote quickstart includes a three-run **local
+SYNTHETIC** rehearsal with 70 receipts; this is not three Monad testnet runs.
+The pushed snapshot's local `pnpm test` was repeated and exits 0 (270 Node +
+121 package tests); its full snapshot-history scan still has zero findings.
 
 Earlier failed attempts were retained as facts: RPC publication initially hit
 Monad's 100-block limit, fixed without another deployment; clean checkout's
@@ -141,8 +213,7 @@ fallback are not native proof. MockBridge and examples are first-party reference
 integrations, not external adoption. Signature attribution does not prove input
 truth or correct inference. v1 trusts one signer; no cryptographic audit is claimed.
 
-Still required: clean private remote and green CI, judge access/publication approval,
-actual protected Vercel deploy and HTTPS QA, human outreach to real teams,
+Still required: judge access/publication approval, human outreach to real teams,
 demo/pitch recording and uploads, form review/submission and confirmation.
 Internal submission target: **October 13, 2026, 20:00 GMT+5**.
 

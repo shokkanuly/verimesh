@@ -14,12 +14,22 @@ No form has been opened or submitted by the agent.
   **26,462 bytes**, under 3 MB. Original project artwork, not a substitute logo.
 - [x] README, [judge guide](JUDGES.md), [live evidence](evidence/live/replay.json),
   [source verification](evidence/live/source-verification.json).
-- [ ] Clean release pushed to an empty private repository; remote CI green.
-  Supplied repository is private but its old history still fails the secrets gate.
+- [x] Initial clean one-commit snapshot pushed to the fresh private repository on
+  [codex/release](https://github.com/shokkanuly/verimesh/tree/codex/release),
+  root commit `f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9`, now the default branch.
+  Approved status/documentation updates are normal child commits; no legacy
+  history is imported and the initial root is unchanged.
+  Old `main` and all previous commits remain unchanged in the private
+  [legacy repository](https://github.com/shokkanuly/verimesh-legacy-private).
+- [x] Remote CI green. [Actual clean-repository run](https://github.com/shokkanuly/verimesh/actions/runs/38163310982)
+  completed: all six jobs pass, including the unchanged full-history secrets
+  gate with zero findings. No gate was waived and no history was force-pushed.
 - [ ] Judge access confirmed for `metropolis@hackathon.monad.xyz`, or approved
   public release. Nothing may be made public before the human says "publish".
-- [ ] Vercel deployment and actual HTTPS acceptance. Human will deploy using
-  [the runbook](docs/09-hosting.md); no operator keys are required.
+- [x] [Protected Vercel preview](https://horkos-47272hzcx-aibekshokan-6139.vercel.app)
+  deployed and actual HTTPS/API, desktop/mobile, 3D movement and LIVE evidence
+  checks pass. Vercel sign-in is required; no public publication is authorized.
+  [Runbook](docs/09-hosting.md); no operator keys were uploaded.
 - [ ] Technical demo video <= 3 minutes; pitch <= 2 minutes; actual upload URLs.
 - [ ] Human sends outreach to 8+ actual teams and records real replies in
   [the empty log](integrations/OUTREACH.md). Zero external adopters are documented.
@@ -53,6 +63,11 @@ That guard does not block viewing the existing LIVE receipts. Do not run
 `demo:live` or `ship:demo --broadcast` for recording: another full run would
 exceed the remaining 2.5 MON authorization budget.
 
+Latest actual recording preflight: **PASS / exit 0 / ready true** after natural
+window expiry, block 70149471, zero broadcasts.
+[Public proof](evidence/ship/P7-recording-preflight.json). This readiness does
+not authorize further spending or make the old signed verdicts fresh.
+
 ## Technical Demo: <= 3 Minutes
 
 | Time | Exact scene and command | Voiceover |
@@ -84,9 +99,12 @@ explicitly; do not present localhost as an accessible hosted product.
 
 | Deliverable | Verified value |
 |---|---|
-| Supplied private repository | https://github.com/shokkanuly/verimesh ; old scan-failing history, not the clean release |
-| Clean repository / green CI / judge access | Pending empty private repository URL and remote run |
-| Dashboard / API | Human Vercel deployment pending; no URL invented |
+| Clean private repository | [verimesh](https://github.com/shokkanuly/verimesh), new repository ID 1414641348 |
+| Preserved private history | [verimesh-legacy-private](https://github.com/shokkanuly/verimesh-legacy-private), original repository ID 1410630641; no commits deleted or rewritten |
+| Clean release branch | [codex/release](https://github.com/shokkanuly/verimesh/tree/codex/release), default branch, source snapshot `f5933b2` |
+| Remote CI / judge access | [Clean push run](https://github.com/shokkanuly/verimesh/actions/runs/38163310982): all six jobs pass; judge access unconfirmed |
+| Dashboard / API | [Protected preview](https://horkos-47272hzcx-aibekshokan-6139.vercel.app) / same-origin `/api`; Vercel login required |
+| LIVE reader | [Five real verdicts / three actions](https://horkos-47272hzcx-aibekshokan-6139.vercel.app/dashboard?mode=live); synthetic inputs |
 | Deployment | [Canonical addresses and hashes](deployments/monad-testnet.json) |
 | One LIVE run | [replay.json](evidence/live/replay.json); 20 scene receipts + funding, six expected reverts |
 | Demo / pitch / optional ad | Human recording/upload pending |

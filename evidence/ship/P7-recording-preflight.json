@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-10-11 15:45:39 UTC",
+  "startedAt": "2026-10-11 15:40:03 UTC",
+  "command": "pnpm run demo:preflight",
+  "exitCode": 0,
+  "afterNaturalWindowExpiry": true,
+  "resetOrExtraTransaction": false,
+  "ready": true,
+  "verification": {
+    "chainId": 10143,
+    "checkedAtBlock": "70149471",
+    "checkedAtBlockHash": "0xf2bb9078b6d7b6d3f0be4a56338f82ef9a72dea3af53c7b58482f9f67fe8bceb",
+    "commit": "d2e3e4d153600e9ef7aef3fa46b449fd98ea3087",
+    "contracts": [
+      {
+        "name": "VerdictRegistry",
+        "address": "0x664b308a4f263DB551A7398A78a3dC383916867c",
+        "txHash": "0xe38944b0e4f92f56132460e08d6ee6fe907cb31c7b4f5b7514c9303c27af2896",
+        "block": 70136150,
+        "sourceVerification": {
+          "status": "not-verified",
+          "provider": "none",
+          "reason": "Explorer API key absent; source publication is a separate post-deploy step"
+        }
+      },
+      {
+        "name": "TripwireGuardianV2",
+        "address": "0x499d40fE88d6f0906bF258a1907B915e49941321",
+        "txHash": "0xe5cf681550770f431eb8e77338d8ca53122d0863c4e57bd307fc89def6d9d371",
+        "block": 70136169,
+        "sourceVerification": {
+          "status": "not-verified",
+          "provider": "none",
+          "reason": "Explorer API key absent; source publication is a separate post-deploy step"
+        }
+      },
+      {
+        "name": "SimpleGate",
+        "address": "0xFd1b15Dd59B1714F6873951924a7DA010F15494e",
+        "txHash": "0x36e6e1ed0f6814bb1e2f950032a3d1f4412125133aafa8e6ce411d1fd7a6c034",
+        "block": 70136188,
+        "sourceVerification": {
+          "status": "not-verified",
+          "provider": "none",
+          "reason": "Explorer API key absent; source publication is a separate post-deploy step"
+        }
+      },
+      {
+        "name": "MockBridge",
+        "address": "0x1C7810075519005F5204Dc5Fea49bB9ce94D093e",
+        "txHash": "0xd1da5d151f4598366c0b20d6f29ea39bafd54093a3b0fbaba3ecd8cbd5228783",
+        "block": 70136206,
+        "sourceVerification": {
+          "status": "not-verified",
+          "provider": "none",
+          "reason": "Explorer API key absent; source publication is a separate post-deploy step"
+        }
+      }
+    ]
+  },
+  "state": {
+    "chainId": 10143,
+    "checkedAtBlock": "70149471",
+    "checkedAtBlockHash": "0xf2bb9078b6d7b6d3f0be4a56338f82ef9a72dea3af53c7b58482f9f67fe8bceb",
+    "agentId": "2185",
+    "epoch": 1,
+    "guardianOwner": "0xeaDE449cDA4CB81855a6De7952d2F65151B06211",
+    "bridge": "0x1C7810075519005F5204Dc5Fea49bB9ce94D093e",
+    "allowlists": {
+      "agents": [
+        "2185"
+      ],
+      "models": [
+        "0xbc68e549ee283f4b1f5aef1cd8f8dd8180e65d6329fd54376c177e8498ebb2e0"
+      ]
+    },
+    "balanceWei": "2071612679999979000",
+    "scope": "demo",
+    "demoReady": true,
+    "bridgePending": false
+  },
+  "seed": [
+    {
+      "action": "bindKey",
+      "txHash": "0x84a47d62f2c9a94522c87313fa331324fba9bd939cda9883e310b4088047aaa4",
+      "block": 70136235
+    },
+    {
+      "action": "setTrustedAgent",
+      "txHash": "0x90c576ba10623919ded259e2fff4bdd7a744b680af4897929c70ed4422b30b01",
+      "block": 70136254
+    },
+    {
+      "action": "setTrustedModel",
+      "txHash": "0x31a834a2ac23d2f073d7f45d4c612d6ea4f429c7def909e2805e337505e8594b",
+      "block": 70136274
+    },
+    {
+      "action": "configureBridge",
+      "txHash": "0xc4e405a72653a05472a9f755a3de4f58138e0efec82a92b1681541e9c8a5979c",
+      "block": 70136296
+    }
+  ],
+  "wallets": [
+    {
+      "role": "deployer",
+      "address": "0xeaDE449cDA4CB81855a6De7952d2F65151B06211",
+      "balanceWei": "2071612679999979000",
+      "nonce": 29
+    },
+    {
+      "role": "agentOwner",
+      "address": "0x761e347186B4E479F7C9142f41a65C4091c48fbe",
+      "balanceWei": "264959318000000000",
+      "nonce": 2
+    }
+  ],
+  "transactionsBroadcast": 0
+}

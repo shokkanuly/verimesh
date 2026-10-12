@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-10-11T15:34:20.691Z",
+  "directory": "/Users/aibek/Desktop/projects/Horkos-release",
+  "snapshotCommit": "f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9",
+  "sourceCommit": "a94a674c6e07de8e8824b7819cc57f1bb5e79190",
+  "branch": "codex/release",
+  "commits": 1,
+  "trackedFiles": 864,
+  "trackedTreeScan": {
+    "scanner": "gitleaks 8.30.1",
+    "exitCode": 0,
+    "findingsCount": 0
+  },
+  "snapshotHistoryScan": {
+    "command": "GITLEAKS_BIN=<pinned local binary> pnpm check:secrets",
+    "exitCode": 0,
+    "findingsCount": 0
+  },
+  "cleanCheckout": {
+    "command": "pnpm check:checkout",
+    "exitCode": 0,
+    "commit": "f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9",
+    "steps": 20,
+    "quickstartSeconds": 15.101882458,
+    "elapsedSeconds": 32.438944334,
+    "solidity": {
+      "passed": 146,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "originalHistory": "untouched",
+  "remotePush": {
+    "verifiedAt": "2026-10-11T17:49:59Z",
+    "repositoryAtPush": "https://github.com/shokkanuly/verimesh",
+    "repository": "https://github.com/shokkanuly/verimesh-legacy-private",
+    "renamedAfterPush": true,
+    "visibility": "private",
+    "branch": "codex/release",
+    "command": "git push --set-upstream origin codex/release",
+    "exitCode": 0,
+    "remoteCommit": "f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9",
+    "mainBefore": "da63215292bc77e86a47b07ebf2e4567c1d0bd79",
+    "mainAfter": "da63215292bc77e86a47b07ebf2e4567c1d0bd79",
+    "existingSnapshotBefore": "cfde44624f89f0aa9bc04d1943e7d9cc29ded93f",
+    "existingSnapshotAfter": "cfde44624f89f0aa9bc04d1943e7d9cc29ded93f",
+    "forcePush": false,
+    "ci": {
+      "runId": 38161193411,
+      "url": "https://github.com/shokkanuly/verimesh-legacy-private/actions/runs/38161193411",
+      "checkedAt": "2026-10-11T17:51:56Z",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobsPassed": 5,
+      "jobsFailed": 1,
+      "jobs": [
+        { "id": 114534282936, "name": "Dashboard Desktop and Mobile", "conclusion": "success" },
+        { "id": 114534283070, "name": "Clean Quickstart and Sandbox", "conclusion": "success" },
+        { "id": 114534283092, "name": "History Secrets Gate", "conclusion": "failure" },
+        { "id": 114534283146, "name": "TypeScript & Vectors Parity", "conclusion": "success" },
+        { "id": 114534283153, "name": "Shared Input and Verdict Digest Parity", "conclusion": "success" },
+        { "id": 114534283343, "name": "Foundry Contracts", "conclusion": "success" }
+      ],
+      "historySecretsGate": {
+        "jobId": 114534283092,
+        "conclusion": "failure",
+        "exitCode": 1,
+        "findingsCount": 3,
+        "commit": "cfde44624f89f0aa9bc04d1943e7d9cc29ded93f",
+        "files": [
+          "contracts/lib/forge-std/test/StdCheats.t.sol",
+          "contracts/lib/openzeppelin-contracts/lib/forge-std/test/StdCheats.t.sol",
+          "packages/sentinel/src/replay.ts"
+        ],
+        "gateWaived": false
+      }
+    }
+  },
+  "cleanRepositoryMigration": {
+    "verifiedAt": "2026-10-11T18:23:30Z",
+    "humanApproved": true,
+    "legacy": {
+      "id": 1410630641,
+      "url": "https://github.com/shokkanuly/verimesh-legacy-private",
+      "visibility": "private",
+      "mainCommit": "da63215292bc77e86a47b07ebf2e4567c1d0bd79"
+    },
+    "release": {
+      "id": 1414641348,
+      "url": "https://github.com/shokkanuly/verimesh",
+      "visibility": "private",
+      "defaultBranch": "codex/release",
+      "commit": "f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9",
+      "pushExitCode": 0,
+      "ci": {
+        "runId": 38163310982,
+        "url": "https://github.com/shokkanuly/verimesh/actions/runs/38163310982",
+        "status": "completed",
+        "conclusion": "success",
+        "jobsPassed": 6,
+        "jobsFailed": 0,
+        "historySecretsFindings": 0,
+        "historySecretsJobId": 114540583925
+      }
+    },
+    "historyRewritten": false,
+    "commitsDeleted": false,
+    "forcePush": false,
+    "gateWaived": false
+  },
+  "publicVisibility": "not authorized",
+  "deploymentVerification": {
+    "command": "pnpm verify:deployment",
+    "directory": "/Users/aibek/Desktop/projects/Horkos-release",
+    "exitCode": 0,
+    "oldCommitObjectPresent": false,
+    "operatorSecretsPresent": false
+  }
+}
