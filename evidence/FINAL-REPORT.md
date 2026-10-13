@@ -1,14 +1,16 @@
 # Horkos Ship Report
 
-Updated October 12, 2026. **LIVE engineering and protected hosting delivered; publication and submission
-PARTIAL.** Contracts and one enforcement run are real Monad testnet evidence.
-The clean snapshot is pushed to a fresh private repository at the human's chosen
+Updated October 13, 2026. **LIVE engineering, public code and public testnet product delivered;
+video uploads and form submission PARTIAL.** Contracts and one enforcement run are real Monad testnet evidence.
+The clean snapshot is pushed to a fresh repository at the human's chosen
 URL on default branch `codex/release`. The old repository and `main` are preserved
 unchanged as `verimesh-legacy-private`. All six remote CI jobs pass. A protected
-Vercel preview is deployed and its HTTPS/API, desktop/mobile, movement and LIVE
-verification checks pass. The human must
-approve publication, record/upload videos and submit the form.
-Nothing has been made public, no outreach was sent, and no submission confirmation exists.
+Vercel preview and the promoted public domain pass HTTPS/API, desktop/mobile,
+movement and LIVE verification checks. The human explicitly approved publication:
+the clean repository and product are anonymously readable; legacy history stays
+private. A supporting technical-demo recording and both timed video scenarios
+are ready locally. The human still reviews/records/uploads the videos and submits
+the form. No outreach was sent and no submission confirmation exists.
 
 ## Live Deployment
 
@@ -91,8 +93,8 @@ The following counts are actual runs, not user/adopter estimates or summed subse
 | Vercel adapter locally | [Eight actual checks](ship/P4-vercel-local.json), raw/preparsed JSON, tamper, 64 KiB bound; not a hosted deployment |
 | Clean tracked tree scan | Exit 0, **0 findings**, pinned Gitleaks 8.30.1; [metadata proof](ship/P5-scan.json) |
 | Preserved legacy all-branch history scan | Exit 1, **3 key-fixture findings**; retained privately and not waived |
-| Clean repository remote CI | [Actual push run](https://github.com/shokkanuly/verimesh/actions/runs/38232881886) completed: **6 jobs pass / 0 fail**, including the unchanged full-history secrets gate with **0 findings** |
-| Hosted HTTPS/API and browser | Actual protected preview passes: ten bundles, read-only API, 5 verdicts / 3 actions, exact links, PASS / MISMATCH / restored PASS, moving desktop/mobile canvas, no overflow/errors |
+| Clean repository remote CI | [Actual push run](https://github.com/shokkanuly/verimesh/actions/runs/38258872422) completed: **6 jobs pass / 0 fail**, including the unchanged full-history secrets gate with **0 findings** |
+| Hosted HTTPS/API and browser | Actual protected preview and anonymous public demo pass: ten bundles, read-only API, 5 verdicts / 3 actions, exact links, PASS / MISMATCH / restored PASS, moving desktop/mobile canvas, no overflow/errors |
 | Form submission | Not run or confirmed |
 
 The checkout report gives exact local timing; cached dependencies and Anvil are
@@ -132,30 +134,45 @@ canonical block state. RPC failures never become recorded-row success.
 `pnpm demo` starts keys-free, read-only product services on free loopback ports.
 [Vercel configuration](../vercel.json) and [hosting handoff](../docs/09-hosting.md)
 are configured and deployed after green CI. The human completed the local CLI
-authentication refresh. Actual verified
-[protected preview](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app) and
-[LIVE reader](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app/dashboard?mode=live)
-require Vercel login. Preview deployment `dpl_C5ywJ8UGVikidEDfqf15Q8p9ZmC1`
-runs reviewed application commit `5f3859e05481a27f9fd129fba9ede00b5cf747da` on Node 22.
+authentication refresh and later explicitly authorized publication.
+[Public demo](https://horkos-murex.vercel.app) and
+[LIVE reader](https://horkos-murex.vercel.app/dashboard?mode=live)
+return 200 without authentication. Production deployment
+`dpl_Df2L3DLHHUs63LJAQXxcW4g9ioRp` runs reviewed application commit
+`0270e45d3ba4f18d8143ff34344b4029e7eb21fb` on Node 22.
 Later commits update delivery documents only, not the tested application.
 Actual API health is read-only / ten bundles / zero rejected files. Uploads
 return 405, unknown origins 403, valid oversized JSON 413. Desktop/mobile canvas
 pixels are nonblank and change over time; assets load, deep links refresh,
 and the browser shows five real accepted events / three matching actions.
 All five Registry and three Guardian explorer links match actual replay receipts;
-the three approved protected-preview status labels are checked in both viewports.
+the three approved public-testnet-demo status labels are checked in both viewports.
 Verification passes, an altered feature mismatches, and restoration passes.
 The completed hosted acceptance also checks visible scroll-reveal sections,
 FAQ toggles and mobile navigation/Escape. Composited screenshot pixels sampled
 outside UI overlays confirm the live 3D scene on both viewports, with no lost
-WebGL context. Final acceptance completed October 12 at 14:59 GMT+5.
+WebGL context. Protected acceptance completed October 12 at 14:59 GMT+5;
+anonymous public acceptance completed October 13 at 13:36 GMT+5.
 No transactions were broadcast during hosting or QA.
 
 Automatic production-domain assignment is disabled. The initial Git API build
 was classified as production, but remained authenticated and unpromoted;
 its public production domain was checked as 404. API `staging` did not accept
-development test authentication. The explicit CLI preview succeeds. No public
-publication or judge access is claimed.
+development test authentication. The explicit CLI preview succeeds. The owner
+CLI subsequently built the approved production source and explicitly promoted
+it to the primary public domain. Standard Protection remains on previews and
+generated deployment URLs. Earlier Git-triggered builds were BLOCKED, not
+promoted; no reason or paid-plan requirement is inferred from that state.
+No separate private collaborator invitation is claimed.
+
+A local supporting technical demo was exported with synthetic narration:
+`horkos-technical-demo.webm`, 158.467 seconds, 1440 x 960, 29,770,325 bytes,
+nine actual product scenes. It was captured from protected application `5f3859e`
+before publication, with zero broadcasts. Its narration is a local system voice,
+not a team member's voice; audio decoding and sampled media frames were checked.
+The caption sidecar and [timed demo/pitch scenarios](../docs/11-video-outlines.md)
+are ready. No video upload URL or human pitch is fabricated or claimed.
+
 The PNG [logo](../brand/horkos-icon-1024.png) is **1024 x 1024 / 26,462 bytes**.
 
 The human approved preserving the existing repository under the private name
@@ -172,8 +189,9 @@ release history; the preserved legacy histories remain separate.
 The [earlier failing CI run](https://github.com/shokkanuly/verimesh-legacy-private/actions/runs/38161193411)
 belongs to the preserved legacy repository, not the new release repository.
 No commits were deleted, no history was rewritten or force-pushed, and both
-repositories remain private. Public visibility still requires "publish".
-No collaborator access is claimed.
+repositories retain their histories. The clean repository is now public with
+explicit human approval and anonymously readable; the legacy repository remains
+private. No private collaborator access is claimed.
 
 All six remote jobs pass: Foundry Contracts, TypeScript & Vectors Parity,
 Shared Input and Verdict Digest Parity, Clean Quickstart and Sandbox, and
@@ -220,8 +238,9 @@ fallback are not native proof. MockBridge and examples are first-party reference
 integrations, not external adoption. Signature attribution does not prove input
 truth or correct inference. v1 trusts one signer; no cryptographic audit is claimed.
 
-Still required: judge access/publication approval, human outreach to real teams,
-demo/pitch recording and uploads, form review/submission and confirmation.
+Still required: human outreach to real teams, video review and uploads, the human
+pitch/real introduction, and form review/submission/confirmation. The human said
+they will submit the form themselves; the agent did not submit it.
 Internal submission target: **October 13, 2026, 20:00 GMT+5**.
 
 Parked: stateless `verifyVerdict` / `_consumeSigned`, chain-derived feature refetch,

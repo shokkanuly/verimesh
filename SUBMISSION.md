@@ -1,6 +1,6 @@
 # Horkos Submission Pack
 
-**Engineering and LIVE run ready; submission not complete.** Internal target:
+**Engineering, LIVE run and public product ready; submission not complete.** Internal target:
 October 13, 2026, 20:00 GMT+5. Supplied hard deadline: October 14, 08:59 GMT+5.
 Limits below come from the operator's plan; the human must check the real form.
 No form has been opened or submitted by the agent.
@@ -14,23 +14,28 @@ No form has been opened or submitted by the agent.
   **26,462 bytes**, under 3 MB. Original project artwork, not a substitute logo.
 - [x] README, [judge guide](JUDGES.md), [live evidence](evidence/live/replay.json),
   [source verification](evidence/live/source-verification.json).
-- [x] Initial clean one-commit snapshot pushed to the fresh private repository on
+- [x] Initial clean one-commit snapshot pushed to the fresh repository on
   [codex/release](https://github.com/shokkanuly/verimesh/tree/codex/release),
   root commit `f5933b2abc2f61e3296d9ba5c0be3ee268cce3b9`, now the default branch.
   Approved status/documentation updates are normal child commits; no legacy
-  history is imported and the initial root is unchanged.
+  history is imported and the initial root is unchanged. The human authorized
+  publication; the clean repository is now public and anonymously readable.
   Old `main` and all previous commits remain unchanged in the private
   [legacy repository](https://github.com/shokkanuly/verimesh-legacy-private).
-- [x] Remote CI green. [Actual clean-repository run](https://github.com/shokkanuly/verimesh/actions/runs/38232881886)
+- [x] Remote CI green. [Actual clean-repository run](https://github.com/shokkanuly/verimesh/actions/runs/38258872422)
   completed: all six jobs pass, including the unchanged full-history secrets
   gate with zero findings. No gate was waived and no history was force-pushed.
-- [ ] Judge access confirmed for `metropolis@hackathon.monad.xyz`, or approved
-  public release. Nothing may be made public before the human says "publish".
-- [x] [Protected Vercel preview](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app)
-  deployed and actual HTTPS/API, desktop/mobile, 3D movement and LIVE evidence
-  checks pass. Vercel sign-in is required; no public publication is authorized.
+- [x] Human-approved public release: clean code and hosted product are readable
+  without sign-in. No separate private collaborator invitation is claimed.
+- [x] [Public testnet demo](https://horkos-murex.vercel.app)
+  deployed and actual anonymous HTTPS/API, desktop/mobile, 3D movement and LIVE
+  evidence checks pass. The primary domain needs no Vercel account; previews
+  and generated deployment URLs retain their existing protection.
   [Runbook](docs/09-hosting.md); no operator keys were uploaded.
-- [ ] Technical demo video <= 3 minutes; pitch <= 2 minutes; actual upload URLs.
+- [x] [Timed demo and pitch scenarios](docs/11-video-outlines.md), with narration
+  and exact screen actions. Captured supporting technical demo: 2:38, AI-narrated,
+  nine actual product scenes; local media reviewed, not uploaded.
+- [ ] Technical demo video <= 3 minutes; human pitch <= 2 minutes; actual upload URLs.
 - [ ] Human sends outreach to 8+ actual teams and records real replies in
   [the empty log](integrations/OUTREACH.md). Zero external adopters are documented.
 - [ ] Videos reviewed end-to-end on another device; no secrets in frames.
@@ -99,17 +104,18 @@ explicitly; do not present localhost as an accessible hosted product.
 
 | Deliverable | Verified value |
 |---|---|
-| Clean private repository | [verimesh](https://github.com/shokkanuly/verimesh), new repository ID 1414641348 |
+| Clean public repository | [verimesh](https://github.com/shokkanuly/verimesh), new repository ID 1414641348 |
 | Preserved private history | [verimesh-legacy-private](https://github.com/shokkanuly/verimesh-legacy-private), original repository ID 1410630641; no commits deleted or rewritten |
-| Clean release branch | [codex/release](https://github.com/shokkanuly/verimesh/tree/codex/release), default branch, initial snapshot `f5933b2`; tested application `5f3859e` |
-| Remote CI / judge access | [Clean push run](https://github.com/shokkanuly/verimesh/actions/runs/38232881886): all six jobs pass; judge access unconfirmed |
-| Dashboard / API | [Protected preview](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app) / same-origin `/api`; Vercel login required |
-| LIVE reader | [Five real verdicts / three actions](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app/dashboard?mode=live); synthetic inputs |
+| Clean release branch | [codex/release](https://github.com/shokkanuly/verimesh/tree/codex/release), default branch, initial snapshot `f5933b2`; tested public application `0270e45` |
+| Remote CI / judge access | [Clean push run](https://github.com/shokkanuly/verimesh/actions/runs/38258872422): all six jobs pass; code and product publicly readable |
+| Dashboard / API | [Public testnet demo](https://horkos-murex.vercel.app) / same-origin read-only `/api`; no login required |
+| LIVE reader | [Five real verdicts / three actions](https://horkos-murex.vercel.app/dashboard?mode=live); synthetic inputs |
 | Deployment | [Canonical addresses and hashes](deployments/monad-testnet.json) |
 | One LIVE run | [replay.json](evidence/live/replay.json); 20 scene receipts + funding, six expected reverts |
-| Demo / pitch / optional ad | Human recording/upload pending |
+| Demo / pitch / optional ad | Local supporting demo: 158.467 s / 29,770,325 bytes; human pitch and upload links pending |
 | Logo | [PNG, 26,462 bytes](brand/horkos-icon-1024.png) |
 | Submission confirmation | Human form submission pending |
 
-Local screenshots, fixtures and drafts cannot replace missing hosted URLs,
-remote CI, actual videos, judge access or submission confirmation.
+Public code and product access are verified. The supporting demo recording is
+local, not an upload URL. The human records the real introduction/pitch, reviews
+and uploads both videos, then submits the form and keeps its confirmation.

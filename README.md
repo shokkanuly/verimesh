@@ -9,7 +9,9 @@ applications enforce their own trust, freshness and reuse rules.
 
 **LIVE on Monad testnet:** four source-verified contracts, five accepted verdicts,
 and one complete throttle/delay/freeze/owner-reset run. Inputs are **SYNTHETIC**;
-one signer is trusted. Hosting, remote CI, videos and submission remain pending.
+one signer is trusted. The [public testnet demo](https://horkos-murex.vercel.app)
+and [all six CI jobs](https://github.com/shokkanuly/verimesh/actions/runs/38258872422)
+are verified. Video uploads and form submission remain human tasks.
 
 [Live addresses and deployment receipts](deployments/monad-testnet.json) |
 [Five-minute judge guide](JUDGES.md) | [Enforcement receipts](evidence/live/replay.json) |
@@ -32,7 +34,10 @@ acceptance and measured timing: [QUICKSTART.md](QUICKSTART.md).
 
 ## Product
 
-Run `pnpm demo` and open the printed URL, then `/dashboard?mode=live`. The launcher
+Open [Horkos](https://horkos-murex.vercel.app) or the
+[LIVE reader](https://horkos-murex.vercel.app/dashboard?mode=live), without signing in.
+The hosted API is same-origin and keys-free; desktop/mobile and evidence checks pass.
+For local recording, run `pnpm demo` and open the printed URL, then `/dashboard?mode=live`. The launcher
 chooses free loopback ports and loads no operator keys. The default `/dashboard` shows **RECORDED** fixtures.
 LIVE reads actual RPC logs, including demo receipt blocks, without substituting
 fixtures on failure. The keys-free API is read-only; uploads return 405.
@@ -70,8 +75,9 @@ bridge. Re-executing old evidence does not make an expired verdict fresh.
 External adopters and commitments: **0 documented**. Stateless consumption,
 chain-derived feature refetch, WebAuthn and quorum are parked roadmap work.
 
-The old Git history remains private and scan-failing. Publish only the separately
-scanned, fresh squashed snapshot after explicit human approval. Remote CI and
-public URLs must be verified before claiming a completed submission.
-[Current status](docs/06-project-status.md), [final report](evidence/FINAL-REPORT.md),
-[submission checklist](SUBMISSION.md), [security assumptions](SECURITY.md).
+The approved clean release is public, with zero full-history scanner findings
+and all six CI jobs passing. The scan-failing legacy history remains private and
+separate; no history was rewritten or force-pushed. Submission is not confirmed.
+[Historical project notes](docs/06-project-status.md), [final report](evidence/FINAL-REPORT.md),
+[submission checklist](SUBMISSION.md), [video scenarios](docs/11-video-outlines.md),
+[security assumptions](SECURITY.md).

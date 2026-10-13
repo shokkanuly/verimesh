@@ -1,24 +1,25 @@
 # Vercel Hosting Runbook
 
-October 12, 2026: **protected preview deployed and tested**. All six CI jobs
-pass in the [clean private repository](https://github.com/shokkanuly/verimesh/actions/runs/38232881886).
-The human approved a protected preview and completed the CLI authentication
-refresh. [Preview](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app),
-[LIVE reader](https://horkos-3hm65pw0e-aibekshokan-6139.vercel.app/dashboard?mode=live).
-Vercel login is required. Unauthenticated requests redirect to authentication.
-No public release, judge access or production promotion is authorized.
+October 13, 2026: **public testnet demo deployed and tested**. All six CI jobs
+pass in the [clean public repository](https://github.com/shokkanuly/verimesh/actions/runs/38258872422).
+The human explicitly authorized publication of the clean repository and Horkos
+website. [Public demo](https://horkos-murex.vercel.app),
+[LIVE reader](https://horkos-murex.vercel.app/dashboard?mode=live).
+The primary production domain is anonymously accessible. Standard Protection
+remains enabled for previews and generated deployment URLs; no keys were imported.
 
 ## Import Settings
 
-Import only the clean private release snapshot after its secrets and CI gates
-pass. Keep deployment protection enabled until the human explicitly approves
-publication. Never import the old scan-failing history.
+Deploy only the clean release after its secrets and CI gates pass. It is now
+public with human approval. Never import the private scan-failing legacy history.
+Keep preview/generated-URL protection; public access is through the promoted
+primary domain, not an authentication bypass link.
 
 | Setting | Value |
 |---|---|
 | Root Directory | Repository root, not `apps/dashboard` |
 | Repository / Branch | `shokkanuly/verimesh` / `codex/release` (default) |
-| Target | Protected Preview only; production/public access requires separate approval |
+| Target | Human-approved public testnet demo on the primary production domain; previews remain protected |
 | Framework | Vite |
 | Install | `pnpm install --frozen-lockfile` |
 | Build | `pnpm build` |
@@ -42,36 +43,40 @@ operator `.env` files, PEM/key files, broadcast artifacts and pending journals.
 This configuration uses documented [Node handlers](https://vercel.com/docs/functions/runtimes/node-js/advanced-node-configuration),
 [function includeFiles and rewrites](https://vercel.com/docs/project-configuration/vercel-json).
 The actual Vercel build, deployment and HTTPS/API checks pass. Keep
-Vercel Authentication enabled, do not expose a production alias, and do not
+preview/generated-URL Vercel Authentication enabled and do not
 import operator secrets. Review provider costs before any paid upgrade.
 
 ## Verified Deployment
 
 - Project: `aibekshokan-6139/horkos`, ID `prj_c8TNwZCH56ONyTmgIAtzvv1cRtL9`.
-- Verified preview: `dpl_C5ywJ8UGVikidEDfqf15Q8p9ZmC1`, target Preview,
-  reviewed application commit `5f3859e05481a27f9fd129fba9ede00b5cf747da`.
+- Public deployment: `dpl_Df2L3DLHHUs63LJAQXxcW4g9ioRp`, target production,
+  reviewed application commit `0270e45d3ba4f18d8143ff34344b4029e7eb21fb`.
   Later commits update documentation only; they do not change the tested application.
 - Vercel Authentication uses Standard Protection. Automatic production-domain
-  assignment is disabled. The public production domain was checked as 404.
+  assignment is disabled. The owner explicitly promoted the ready deployment;
+  the primary public domain now returns 200 without authentication.
 - Hosted API: read-only, ten bundles, zero rejected files; upload 405,
   unknown origin 403, valid oversized JSON 413, signature/scorer verification 200.
 - Actual browser RPC: five accepted verdicts, three guardian actions, exact
   Registry and Guardian receipt links, PASS then altered-feature MISMATCH then restored PASS.
 - Desktop 1440 x 900 and mobile 390 x 844: nonblank moving canvas, assets loaded,
   no horizontal overflow or uncaught browser errors; dashboard deep-link refresh works.
-  All three approved protected-preview status labels, visible scroll reveals,
+  All three approved public-testnet-demo status labels, visible scroll reveals,
   FAQ toggles and mobile navigation/Escape also pass.
-  Final hosted acceptance completed October 12 at 14:59 GMT+5, with zero broadcasts.
+  Anonymous public acceptance completed October 13 at 13:36 GMT+5, with zero broadcasts.
 
-Use the exact verified preview URL above. Generated branch aliases are not the
-tested application origin. Do not share authentication tokens or bypass links.
+Use the verified public primary domain above. Generated branch aliases are not
+the tested application origin. Do not share authentication tokens or bypass links.
 The first Git API request was classified as production, but remained protected
 and unpromoted. The API `staging` attempt rejected development test authentication.
 An explicit CLI `--target preview` deployment resolved the environment mismatch.
+The approved production source later built successfully through the owner CLI
+and was explicitly promoted. Earlier Git-triggered attempts remained BLOCKED;
+no blocked build was promoted and no paid feature was enabled.
 
 ## Acceptance Before Sharing
 
-1. Record the actual protected deployment URL in `SUBMISSION.md`. Test home,
+1. Record the actual public deployment URL in `SUBMISSION.md`. Test home,
    `/dashboard`, refresh/deep links, images and the moving 3D scene.
 2. `/api/health` must report read-only, ten bundles and zero rejected files.
    `/api/bundles` must contain the five LIVE IDs in `evidence/live/replay.json`.
@@ -82,8 +87,8 @@ An explicit CLI `--target preview` deployment resolved the environment mismatch.
    Restore: PASS. This proves signature/scorer consistency, not feature truth.
 5. `POST /api/bundle` returns 405. `/api/verify` verifies without storing.
    Unknown origins return 403. Check mobile, console, cold starts and API errors.
-6. Test the protected link from another browser/device. Enable public access
-   only after explicit human publication approval; no private key is a test login.
+6. Test the public primary link in a signed-out browser/device. It must show
+   the product without Vercel login; preview/generated URLs remain protected.
 
 The function has no disk writes or durable ingestion. Its existing request and
 body limits apply per warm instance/direct socket IP, not globally across

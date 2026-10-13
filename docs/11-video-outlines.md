@@ -7,7 +7,8 @@ videos, uploads them, and submits the form.
 
 ## Technical Demo: Target 2:45, Maximum 3:00
 
-Open the hosted home, then its `/dashboard?mode=live` page. Keep LIVE, Monad
+Open [the public home](https://horkos-murex.vercel.app), then
+[the LIVE reader](https://horkos-murex.vercel.app/dashboard?mode=live). Keep LIVE, Monad
 Testnet and SYNTHETIC input provenance visible. Start after the five rows load.
 The supplied product screen recording is supporting footage; its narration is
 synthetic, not a team member's voice.
@@ -65,3 +66,21 @@ Do not invent teammates, personal motivation, users, commitments or revenue.
 0:10-0:20: PASS, tamper MISMATCH and bounded mock-bridge action.
 0:20-0:30: Actual accessible URL and single-signer/testnet limits.
 This optional clip is lower priority than the two required videos and submission.
+
+## Captured Supporting Demo
+
+A real product screen recording is available locally as
+`horkos-technical-demo.webm`: **158.467 seconds (2:38)**, **1440 x 960**,
+**29,770,325 bytes**, with a decoded narration audio track and nine product scenes.
+It was captured from the protected hosted application before public promotion,
+at application commit `5f3859e`. Narration is generated locally with a system
+voice, not a team member's voice. No external voice service or new transaction
+was used. The companion `horkos-technical-demo.srt` contains the narration.
+Media decoding and sampled product frames were checked; the human still reviews
+the whole video and uploads it. This does not replace the human pitch or create
+an upload URL.
+
+The public application is now at
+[Horkos](https://horkos-murex.vercel.app) and
+[LIVE on Monad](https://horkos-murex.vercel.app/dashboard?mode=live), with no
+Vercel sign-in needed. Use these public links for your recording and submission.

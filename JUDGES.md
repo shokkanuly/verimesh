@@ -2,12 +2,16 @@
 
 **Live Monad testnet prototype.** Four contracts are source-verified; five signed
 verdicts and the full enforcement sequence have real receipts. Inputs are
-synthetic, the bridge is a mock, and the signer is trusted. Hosted URLs, remote
-CI, videos and judge repository access are not yet confirmed.
+synthetic, the bridge is a mock, and the signer is trusted. The
+[public demo](https://horkos-murex.vercel.app) and clean repository are anonymously
+readable; [all six CI jobs](https://github.com/shokkanuly/verimesh/actions/runs/38258872422)
+pass. Video uploads and form submission remain unconfirmed.
 
 ## Inspect In Two Minutes
 
-Run the four commands in [QUICKSTART.md](QUICKSTART.md) without a wallet or secrets.
+Start with [LIVE on Monad](https://horkos-murex.vercel.app/dashboard?mode=live),
+without a Vercel account or wallet. For a local run, use the four commands in
+[QUICKSTART.md](QUICKSTART.md) without a wallet or secrets.
 For the product, run `pnpm demo` as described in [README.md](README.md#product).
 Open `/dashboard?mode=live`: five accepted events, three guardian actions and
 actual explorer links. Guardian now reads NORMAL after the owner's reset.
